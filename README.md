@@ -1,3 +1,5 @@
+http://pusocmethodscamp.org/
+
 This is the website for the Princeton sociology methods camp summer 2017 for incoming Princeton PhD Students.
 
 The sociology summer methods camp is a summer intensive training course intended to give incoming Princeton sociology PhD students the computational and statistical foundations in preparation for their statistics and methods training. We understand that students come into the program with different backgrounds and research experiences. This class is intended to be give all student, regardless of prior experience, a running start in data analysis at the beginning of their PhD program.
