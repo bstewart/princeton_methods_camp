@@ -1,4 +1,4 @@
-http://pusocmethodscamp.org/
+To learn more: http://pusocmethodscamp.org/
 
 This is the website for the Princeton sociology methods camp summer 2017 for incoming Princeton PhD Students.
 
