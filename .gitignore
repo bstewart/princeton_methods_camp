@@ -1,0 +1,14 @@
+/_site/
+/vendor/
+*.swp
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.gz
+*.toc
+*.gz(busy)
+*.DS_Store
+*.bbl
+*.blg

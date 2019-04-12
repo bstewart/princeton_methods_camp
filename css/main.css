@@ -3,10 +3,9 @@ body { margin: 60px auto; width: 70%; }
 a { text-decoration: none; color: #ff8f00; }
 a:hover { text-decoration: underline; }
 
-p, ul { font-size: 1em; line-height: 1.1em; color: #333; }
-p, ol { font-size: 1em; line-height: 1.1em; color: #333; }
+p, ul, ol { font-size: 1em; line-height: 1.1em; color: #333; }
 
-ol ul { font-size: 1em; line-height: 1.1em; color: #333; }
+ol, ul { margin-bottom: 0.5em; }
 
 h1, h2, h3, h4, h5 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
 h1 { font-size: 2.5em;  }
