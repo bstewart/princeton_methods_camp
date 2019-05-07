@@ -70,3 +70,19 @@ You may add additional sections to the page by adding them to the `sections`
 list in the markdown files frontmatter. When processing the sections, the
 default layout will look for markdown files by that name and include their
 content within each new section.
+
+For example the current frontmatter of `index.md` includes this:
+
+```yaml
+sections:
+  - learning-objectives
+  - pre-arrival
+  - camp
+  - logistics
+  - faq
+  - about
+```
+
+The default layout will show the content of index.md first and the include the
+content from `learning-objectives.md`, `pre-arrival.md`, `camp.md`,
+`logistics.md`, `faq.md`, and `about.md` in that order.
