@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
-$fixed-navbar-height: 70px;
+$fixed-navbar-height: 60px;
 
 body {
   // For scrollspy
@@ -25,15 +25,17 @@ body {
 }
 
 section {
-  padding: 50px 0;
+  padding: 3em 0;
 
   &:nth-child(even) {
 	  background: #eee;
   }
-}
 
-section {
   div > p:first-of-type {
     @extend .lead;
+  }
+
+  &.primary-content {
+    padding-top: 1em;
   }
 }
