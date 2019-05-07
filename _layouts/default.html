@@ -11,18 +11,25 @@
 	<body>
 		<nav>
 <ul>
-<li><a href="/">Home</a></li>
-<li><a href="/learning-objectives">Learning objectives</a></li>
-<li><a href="/pre-arrival">Pre-arrival</a></li>
-<li><a href="/camp">Camp</a></li>
-<li><a href="/logistics">Logistics</a></li>
-<li><a href="/faq">FAQs</a></li>
-<li><a href="/about">About</a></li>
+  {% if page.navigation %}
+    {% for navlink in page.navigation %}
+      <li><a href="{{ navlink.url | prepend: site.baseurl }}">{{ navlink.name }}</a></li>
+    {% endfor %}
+  {% endif %}
 </ul>
 		</nav>
 <div class="container">
 
 			{{ content }}
+
+      {% if page.sections %}
+        {% for section in page.sections %}
+          <section>
+            {% capture section_content %}{% include_relative {{ section }}.md %}{% endcapture %}
+            {{ section_content | markdownify }}
+          </section>
+        {% endfor %}
+      {% endif %}
 
 </div>
 

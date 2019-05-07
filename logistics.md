@@ -1,9 +1,4 @@
----
-layout: default
-title: Logistics
----
-
-#### Logistics
+## Logistics
 
 We use Piazza for all our of course communications. Please ensure you have
 signed up to the course

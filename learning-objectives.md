@@ -1,7 +1,4 @@
----
-layout: default
-title: Learning objectives
----
+## Learning objectives
 
 The Methods Camp is designed to give you training in both math and computing.  In math, you will receive training in three main areas: calculus, probability, and matrix algebra.  In computing, you will receive training in three main areas: data wrangling, iteration, and visualization.
 

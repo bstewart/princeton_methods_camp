@@ -1,3 +1,5 @@
+## About
+
 The Sociology Summer Methods Camp began in 2016, and the materials that we currently use include contributions from many of the people who have taught and participated in the program.  Here is a list of all the instructors:
 
 - 2016: Rebecca Johnson, Janet Xu (graduate students instructors) and Brandon Stewart (faculty advisor).

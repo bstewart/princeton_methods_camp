@@ -1,9 +1,4 @@
----
-layout: default
-title: FAQs
----
-
-#### FAQs
+## FAQs
 
 * **Should I participate in the camp if I have no plans to do quantitative work
   beyond what's required?** Yes! The aim of the camp is to make all students

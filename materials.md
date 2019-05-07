@@ -1,15 +1,9 @@
----
-layout: default
-title: Course Materials
----
-
-#### Course Materials
+## Course Materials
 
 The syllabus for 2018's camp is below. Here is a PDF version of 2017
-Method Camp's [2017
-Syllabus]({{ site.url }}/download/2017_Syllabus_.pdf).
+Method Camp's [2017 Syllabus]({{ site.url }}/download/2017_Syllabus_.pdf).
 
-##### Logistics
+### Logistics
 
 **Dates of camp**: Tuesday September 5th to Friday September 8th
 
@@ -29,7 +23,7 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 the past, students have found it helpful to use office hours as a time
 to just work on the homework together in one place)
 
-##### Materials for over the summer and during the camp {#materialsforoverthesummerandduringthecamp}
+### Materials for over the summer and during the camp {#materialsforoverthesummerandduringthecamp}
 
 **This will be updated in the next few weeks, to be finalized in
 mid-June 2018**
@@ -74,7 +68,7 @@ mid-June 2018**
             [definite
             integrals](https://www.youtube.com/watch?v=0RdI3-8G4Fs)
 
-##### Assignments during on-campus portion {#assignmentsduringoncampusportion}
+### Assignments during on-campus portion {#assignmentsduringoncampusportion}
 
 Programming is learned best through practice rather than through passive
 listening, so each day we're going to have a short activity/assignment
@@ -97,9 +91,9 @@ before camp.
 We'll be available in office hours and on Piazza to offer help on the
 assignment.
 
-##### Schedule for on-campus portion of camp {#scheduleforoncampusportionofcamp}
+### Schedule for on-campus portion of camp {#scheduleforoncampusportionofcamp}
 
-###### Day 1 {#day1}
+#### Day 1 {#day1}
 
 **Math**: Calculus and its Applications
 
@@ -144,7 +138,7 @@ assignment.
 
 -   **Relevant DataCamp modules**: Intermediate R
 
-###### Day 2 {#day2}
+#### Day 2 {#day2}
 
 **Math**: Matrix Algebra
 
@@ -177,7 +171,7 @@ assignment.
 -   Functions
 -   Apply family
 
-###### Day 3 {#day3}
+#### Day 3 {#day3}
 
 **Math**: Basic Probability
 
@@ -207,7 +201,7 @@ assignment.
 -   Reshaping data between long and wide format
 -   Basic string operations for renaming and recoding variables
 
-###### Day 4 {#day4}
+#### Day 4 {#day4}
 
 **Math**: Basic Optimization; Open-ended Q & A
 
@@ -247,7 +241,7 @@ assignment.
 -   Open-ended Question and Answer session about material covered this
     week
 
-##### Summer DataCamp Exercises {#datacamp}
+### Summer DataCamp Exercises {#datacamp}
 
 Here are DataCamp modules that cover topics in using R that we expect
 you to be familiar with by the start of camp. Some of you are already
@@ -320,7 +314,7 @@ dplyr](https://www.datacamp.com/courses/joining-data-in-r-with-dplyr);
 For those of you who want a little more introduction on R and RStudio.
 This module may help. Expected time: 3 hours.
 
-##### Reference Materials
+### Reference Materials
 
 Here is Method Camp's [2016
 Syllabus]({{ site.url }}/download/Final_syllabus_2016.pdf).
