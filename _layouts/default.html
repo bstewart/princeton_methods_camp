@@ -25,20 +25,24 @@
       	</div>
 			</div>
 		</nav>
-    <div class="content-container">
-      <div class="container">
 
-        {{ content }}
+    <div class="sections">
+      <section>
+        <div class="container">
+          {{ content }}
+        </div>
+      </section>
 
-        {% if page.sections %}
-          {% for section in page.sections %}
-            <section>
+      {% if page.sections %}
+        {% for section in page.sections %}
+          <section>
+            <div class="container">
               {% capture section_content %}{% include_relative {{ section }}.md %}{% endcapture %}
               {{ section_content | markdownify }}
-            </section>
-          {% endfor %}
-        {% endif %}
-      </div>
+            </div>
+          </section>
+        {% endfor %}
+      {% endif %}
     </div>
 		{% comment %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

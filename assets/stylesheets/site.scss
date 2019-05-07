@@ -21,3 +21,11 @@ body {
     margin: -$fixed-navbar-height 0 0; /* negative fixed header height */
   }
 }
+
+section {
+  padding: 50px 0;
+
+  &:nth-child(even) {
+	  background: #eee;
+  }
+}
