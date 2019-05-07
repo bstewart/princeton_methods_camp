@@ -83,6 +83,6 @@ sections:
   - about
 ```
 
-The default layout will show the content of index.md first and the include the
+The default layout will show the content of `index.md` first and the include the
 content from `learning-objectives.md`, `pre-arrival.md`, `camp.md`,
 `logistics.md`, `faq.md`, and `about.md` in that order.
