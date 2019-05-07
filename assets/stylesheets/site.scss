@@ -6,6 +6,18 @@ html {
   scroll-behavior: smooth;
 }
 
-.content-container {
-  padding-top: 80px;
+$fixed-navbar-height: 70px;
+
+body {
+
+	// Padding due to fixed navbar.
+  padding-top: $fixed-navbar-height;
+
+  // Fixes issue with fixed navbar and anchor links.
+  :target:before {
+    content: "";
+    display: block;
+    height: $fixed-navbar-height; /* fixed header height*/
+    margin: -$fixed-navbar-height 0 0; /* negative fixed header height */
+  }
 }
