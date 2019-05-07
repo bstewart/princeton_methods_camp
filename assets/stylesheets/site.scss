@@ -29,3 +29,9 @@ section {
 	  background: #eee;
   }
 }
+
+section {
+  div > p:first-of-type {
+    @extend .lead;
+  }
+}

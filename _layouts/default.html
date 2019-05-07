@@ -29,7 +29,11 @@
     <div class="sections">
       <section>
         <div class="container">
-          {{ content }}
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              {{ content }}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -37,8 +41,12 @@
         {% for section in page.sections %}
           <section>
             <div class="container">
-              {% capture section_content %}{% include_relative {{ section }}.md %}{% endcapture %}
-              {{ section_content | markdownify }}
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  {% capture section_content %}{% include_relative {{ section }}.md %}{% endcapture %}
+                  {{ section_content | markdownify }}
+                </div>
+              </div>
             </div>
           </section>
         {% endfor %}
