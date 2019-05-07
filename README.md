@@ -3,6 +3,13 @@ This is the website for the Princeton Sociology Methods Camp for incoming Prince
 https://pusocmethodscamp.org/
 
 Powered by [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/).
+# Table of contents
+
+* [Editing](#editing)
+  * [Local development environment](#local-development-environment)
+  * [The default layout](#the-default-layout)
+    * [Navigation](#navigation)
+    * [Sections](#sections)
 
 # Editing
 
