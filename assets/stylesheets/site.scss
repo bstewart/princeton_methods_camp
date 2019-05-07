@@ -9,6 +9,8 @@ html {
 $fixed-navbar-height: 70px;
 
 body {
+  // For scrollspy
+  position: relative;
 
 	// Padding due to fixed navbar.
   padding-top: $fixed-navbar-height;
