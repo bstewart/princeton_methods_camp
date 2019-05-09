@@ -1,3 +1,5 @@
+## Camp
+
 The outline for the in-person portion of camp can be found below.
 
 #### Day 1
