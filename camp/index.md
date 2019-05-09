@@ -33,17 +33,17 @@ Resources:
 
 *Slides will be posted prior to lecture*
 
+Resources:
+
+- Your go-to resource for R questions: [stackoverflow](https://stackoverflow.com/)
+
+- [MIT tutorial on for loops](https://ocw.mit.edu/ans7870/18/18.05/s14/html/r-tut-forloop.html)
+
 **Assignment One**
 
 *TBD*
 
 Due: Day 2
-
-**Resources:**
-
-- Your go-to resource for R questions: [stackoverflow](https://stackoverflow.com/)
-
-- [MIT tutorial on for loops](https://ocw.mit.edu/ans7870/18/18.05/s14/html/r-tut-forloop.html)
 
 #### Day 2
 
@@ -58,6 +58,8 @@ Due: Day 2
 4. Rank and inverse of matrices
 
 5. Matrix applications: distance measures, dimension reduction, solving linear systems of equations
+
+*Slides will be posted prior to lecture*
 
 Resources:
 
@@ -75,6 +77,8 @@ Resources:
 
 2. Loops and ifelse statements
 
+*Slides will be posted prior to lecture*
+
 **Assignment Two**
 
 *TBD*
@@ -90,6 +94,8 @@ Due Day 4.
 2. Conditional probability and Bayes' Rule
 
 3. independence
+
+*Slides will be posted prior to lecture*
 
 Resources
 
@@ -114,6 +120,8 @@ Resources
 - Reshaping data between long and wide format
 
 - Basic string operations for renaming and recoding variables
+
+*Slides will be posted prior to lecture*
 
 #### Day 4
 
