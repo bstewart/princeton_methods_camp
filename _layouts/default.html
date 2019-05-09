@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-
+    <link href="{{ site.baseurl }}/assets/stylesheets/site.css" rel="stylesheet">
 	</head>
 
 
-	<body>
-		<nav>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/learning-objectives">Learning objectives</a></li>
-<li><a href="/pre-arrival">Pre-arrival</a></li>
-<li><a href="/camp">Camp</a></li>
-<li><a href="/logistics">Logistics</a></li>
-<li><a href="/faq">FAQs</a></li>
-<li><a href="/about">About</a></li>
-</ul>
+	<body data-spy="scroll" data-target="#navbar" data-offset="60">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" id="navbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+			<div class="container">
+      	<div class="collapse navbar-collapse" id="navbarNav">
+      	  <ul class="navbar-nav">
+      	    {% if page.navigation %}
+      	      {% for navlink in page.navigation %}
+      	        <li class="nav-item">
+      	          <a class="nav-link" href="{{ navlink.url | prepend: site.baseurl }}">{{ navlink.name }}</a>
+      	        </li>
+      	      {% endfor %}
+      	    {% endif %}
+      	  </ul>
+      	</div>
+			</div>
 		</nav>
-<div class="container">
 
-			{{ content }}
+    <div class="sections">
+      <section class="primary-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </section>
 
-</div>
-
+      {% if page.sections %}
+        {% for section in page.sections %}
+          <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  {% capture section_content %}{% include_relative {{ section }}.md %}{% endcapture %}
+                  {{ section_content | markdownify }}
+                </div>
+              </div>
+            </div>
+          </section>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</body>
-
 </html>

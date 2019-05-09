@@ -1,0 +1,41 @@
+---
+---
+@import "bootstrap";
+
+html {
+  scroll-behavior: smooth;
+}
+
+$fixed-navbar-height: 60px;
+
+body {
+  // For scrollspy
+  position: relative;
+
+	// Padding due to fixed navbar.
+  padding-top: $fixed-navbar-height;
+
+  // Fixes issue with fixed navbar and anchor links.
+  :target:before {
+    content: "";
+    display: block;
+    height: $fixed-navbar-height; /* fixed header height*/
+    margin: -$fixed-navbar-height 0 0; /* negative fixed header height */
+  }
+}
+
+section {
+  padding: 3em 0;
+
+  &:nth-child(even) {
+	  background: #eee;
+  }
+
+  div > p:first-of-type {
+    @extend .lead;
+  }
+
+  &.primary-content {
+    padding-top: 1em;
+  }
+}
