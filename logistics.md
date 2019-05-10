@@ -1,8 +1,8 @@
 ## Logistics
 
-Dates of camp: Tuesday September 3rd to Friday September 6th.
+**Dates of camp:** Tuesday September 3rd to Friday September 6th.
 
-Time structure of camp:
+**Time structure of camp:**
 
 Breakfast: 9:00 AM
 
@@ -12,9 +12,9 @@ Lunch session(qualitative methods): 12:00 - 1:30 PM
 
 Afternoon session, programming: 2:00 - 4:00 PM
 
-Location: 165 Wallace Hall
+**Location:** 165 Wallace Hall
 
-Office hours: TBD
+**Office hours:** TBD
 
 We use Piazza for all our of course communications. Please ensure you have
 signed up to the course
