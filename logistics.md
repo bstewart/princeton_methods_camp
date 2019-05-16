@@ -14,8 +14,8 @@ Afternoon session, programming: 2:00 - 4:00 PM
 
 **Location:** 165 Wallace Hall
 
-**Office hours:** TBD
+**Office hours:** Katie will hold office hours from 4pm-6pm and Liv will hold office hours from 7pm-9pm. 
 
 We use Piazza for all our of course communications. Please ensure you have
 signed up to the course
-[here](piazza.com/princeton/summer2019/socsmc/home).
+[here](http://piazza.com/princeton/summer2019/socsmc/home).
