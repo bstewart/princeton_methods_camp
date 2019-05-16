@@ -51,12 +51,12 @@ In order to prepare you for the coding portion of the summer assignment and work
 
 **Math Resources**
 
-- [Calculus] (https://www.khanacademy.org/math/calculus-home)
+- [Calculus](https://www.khanacademy.org/math/calculus-home)
 
-- [Linear Algebra] (https://www.khanacademy.org/math/linear-algebra)
+- [Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
 
 **Coding Resources**
 
 - [Intro to R for Social Scientists](https://clanfear.github.io/CSSS508/)
 
-- [Practice with variables, functions, logic and if statements, looping, writing clean code, arrays and objects] (https://www.khanacademy.org/computing/computer-programming)
+- [Practice with variables, functions, logic and if statements, looping, writing clean code, arrays and objects](https://www.khanacademy.org/computing/computer-programming)
