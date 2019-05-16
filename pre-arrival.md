@@ -29,3 +29,34 @@ Chapter 6 covers partial derivatives, maxima and minima, root-finding, multi-dim
 **Chapter 7: Probability Theory**
 
 This chapter covers probability theory, which will be a major focus of the early part of your fall statistics course. Pay special attention to sections 7.5, 7.6, 7.7, and 7.8. Overall this section might not be challenging, but I recommend taking your time with it. The more comfortable you are with probability theory, the better!
+
+#### Coding Assignment
+
+In order to prepare you for the coding portion of the summer assignment and work we will be doing during the camp, we are asking you to complete the following [RStudio Primers](https://rstudio.cloud/learn/primers).
+
+- The Basics - compete all sub-modules.
+
+- Work With data - complete all sub-modules.
+
+- Visualize Data - complete Exploratory Data Analysis and Scatterplots sub-modules, browse others.
+
+- Tidy Your Data - browse these; we will cover this material in the camp so it would be good to be familiar with it, but you won't need it for the summer assignment.
+
+- Iterate - complete Introduction to Iteration.
+
+- Write Functions - complete Function Basics and How to Write a Function, browse others.  
+
+
+#### Additional Resources
+
+**Math Resources**
+
+- [Calculus] (https://www.khanacademy.org/math/calculus-home)
+
+- [Linear Algebra] (https://www.khanacademy.org/math/linear-algebra)
+
+**Coding Resources**
+
+- [Intro to R for Social Scientists](https://clanfear.github.io/CSSS508/)
+
+- [Practice with variables, functions, logic and if statements, looping, writing clean code, arrays and objects] (https://www.khanacademy.org/computing/computer-programming)
