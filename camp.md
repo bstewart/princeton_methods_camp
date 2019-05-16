@@ -65,6 +65,8 @@ Due: Day 2
 
 Resources:
 
+- Gill, Chapters 3-4
+
 - [Practice finding the rank of a matrix](http://www.math.odu.edu/~bogacki/cgi-bin/lat.cgi?c=rref)
 
 - [General guide to linear algebra](https://betterexplained.com/articles/linear-algebra-guide/)
