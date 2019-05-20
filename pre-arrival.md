@@ -1,7 +1,5 @@
 ## Pre-arrival
 
-Pre-arrival materials go here. We should include links to RStudio Primers and Khan Academy videos. We also need to send out assignments.
-
 #### Reading Assignment
 
 The textbook we will use for Methods Camp is *Essential Mathematics for Political and Social Research* by Jeff Gill. You are not expected to master the topics covered in the readings by the time you arrive at camp! These readings and the summer assignments are meant as a first introduction to what we'll be covering during the camp itself. If you find yourself struggling with a topic, reach out to us!
