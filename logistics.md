@@ -14,7 +14,7 @@ Afternoon session, programming: 2:00 - 4:00 PM
 
 **Location:** 165 Wallace Hall
 
-**Office hours:** Katie will hold office hours from 4pm-6pm and Liv will hold office hours from 7pm-9pm. 
+**Office hours:** Katie and Liv will hold office hours from 4pm-6pm every day but Friday, and will be available by email in the evenings to answer additional questions. 
 
 We use Piazza for all our of course communications. Please ensure you have
 signed up to the course
