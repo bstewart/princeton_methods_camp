@@ -1,0 +1,588 @@
+---
+title: "Day one programming: code to follow along with lecture"
+author: "Methods camp instructors"
+date: "September 4th, 2018"
+output: html_document
+---
+
+
+
+```{r}
+#load relevant packages
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+
+##set to your own working directory
+setwd("~/Dropbox (Princeton)/MethodsCamp/2019/Programming Lectures/Day 1 Programming/Activity")
+
+##load addhealth data (available on Blackboard)
+addh <- read.csv("addhealthlec1.csv")
+
+```
+
+
+
+```{r}
+##check what the data are stored as
+class(addh)
+
+##check what the "money's importance to a relationship"
+##is stored as; remember we can index variables
+##using brackets or $variablename
+class(addh$money)
+
+```
+
+
+```{r}
+##create a vector with three id's
+sampidvec <- c("1690", "1370", "1121")
+sampidvec
+
+```
+
+
+```{r}
+##set a seed so we sample same ids each time
+set.seed(1988)
+
+##create a vector with three randomly sampled id's
+sampids <- sample(rownames(addh), size = 3)
+sampids
+```
+
+
+```{r}
+##create a sequence of the beginning of every decade
+decades <- seq(from = 1900, to = 2000, by = 10)
+decades
+
+```
+
+
+
+```{r}
+##create names for decades spanning from 1900 to 2000 by 10
+decadenames <- paste(c("decade", "birthday", "party"), seq(from = 1900, to = 2000, by = 10), 
+                     sep = "_") 
+decadenames
+
+
+```
+
+
+
+```{r}
+##extract first element from sample id vector
+sampids[1]
+
+##extract first and second element from sample id vector
+sampids[1:2]
+
+##extract first and third element from sample id vector
+sampids[c(1, 3)]
+
+```
+
+
+
+```{r}
+##remove the first element
+sampids[-1]
+
+##remove the first and third elements
+sampids[-c(1, 3)]
+
+```
+
+
+
+```{r}
+##check class of sample ids vector
+class(sampids)
+
+##convert to numeric identifiers
+numsampids <- as.numeric(sampids)
+numsampids
+
+##convert back to string identifiers
+stringsampids <- as.character(numsampids)
+stringsampids
+
+##how to use a vector to extract elements from another vector
+##here: the age associated with those 3 sample ids
+ages <- addh$age[numsampids]
+ages
+
+```
+
+
+
+```{r}
+##combine each observation's age with its id into 
+## 1 x 2 vector that has an id and age
+obs1 <- c(numsampids[1], ages[1])
+obs1
+obs2 <- c(numsampids[2], ages[2])
+obs2
+obs3 <- c(numsampids[3], ages[3])
+obs3
+
+##stack as rows in a matrix
+obs1to3 <- rbind(obs1, obs2, obs3)
+obs1to3
+
+##stack as rows into a data.frame
+obs1to3df <- as.data.frame(obs1to3)
+obs1to3df
+
+
+```
+
+
+```{r}
+##another way to arrive at same answer:
+##(if they're in same order), putting id 
+##vector side by side with age vector by binding them as columns
+obs1to3cols <- cbind(numsampids, ages)
+obs1to3cols
+
+##data.frame form
+obs1to3colsdf <- as.data.frame(obs1to3cols)
+obs1to3colsdf
+
+head(addh)
+
+```
+
+
+```{r}
+##print the two vectors
+stringsampids; ages
+
+##combine into a matrix
+agestringmat <- cbind(stringsampids, ages)
+agestringmat
+mean(agestringmat[, "ages"])
+
+```
+
+
+
+```{r}
+##way 1: using the column indices 
+addh2 <- addh[, c(2:4, 7:9)]
+head(addh2, 3)
+
+##way 2: using the column names
+addh2 <- addh[, c("age",  "gender", "income",
+         "love", "nocheating", "money")]
+head(addh2, 3)
+```
+
+
+
+```{r}
+##way 3: illustration of indexing using data$variable
+addh2$logmoney <- log(addh2$money) 
+head(addh2, 2)
+
+```
+
+
+```{r}
+#rank the respondents in order of age and manually look at which 
+#row forms the cutoff
+#between 21 and 22, and then manually restrict to that row and higher
+orderedaddh <- addh[order(addh$age), ]
+
+#trying to find the 21/22 year old cutoff
+orderedaddh[300:303, ]
+
+#not high enough, try again:
+orderedaddh[1300:1303, ]
+
+#too high, difficult to impossible to find the cutoff!
+```
+
+
+```{r}
+##only want people 22 and over
+head(addh[addh$age >= 22, ], 3)
+
+addh %>% 
+  filter(age >= 22) %>% 
+  mutate(age.over.income2 = age/income)
+
+
+
+
+  
+##want people whose income < 20000 but have no debt
+head(addh[addh$debt == "nodebt" &
+          addh$income < 20000, ], 3)
+
+```
+
+
+```{r}
+##want people who either have income >= 80000 OR
+##are over the age of 25
+head(addh[addh$income >= 80000 |
+          addh$age > 25,  ], 3)
+
+##no missing data in this particular cleaned data, but
+##say there was, and want people not missing data
+##for any of the relationship attitude variables
+nomissrel <- addh[!is.na(addh$love) & 
+                  !is.na(addh$nocheating) &
+                  !is.na(addh$money), ]
+
+##more detail on what is.na(vector) is doing:
+testvec <- c(NA, 5, NA, 6, 6)
+is.na(testvec)
+
+```
+
+
+
+```{r}
+addhtest <- addh
+#create a love or money variable filled with missing data
+addhtest$loveormoney <- NA
+
+#manually code a new variable based on comparing
+#the ratings
+addhtest[c(1, 6, 9), c("id", "love", "money")] #obs to code
+addhtest$loveormoney[1] <- "lovemoreimport"
+addhtest$loveormoney[6] <- "equal"
+addhtest$loveormoney[9] <- "moneymoreimport"
+addhtest[c(1, 6, 9), c("id", "love", "money", "loveormoney")]
+
+```
+
+
+
+```{r}
+##truncated ifelse for use with one logical statement
+##here, coding 1 = money more important, 0 = equal or less
+addh2$moneymoreimport <- ifelse(addh2$money >
+                                addh2$love, 1, 0) 
+head(addh2[, c("love", "money", "moneymoreimport")], 3)
+table(addh2$moneymoreimport)
+
+##can combine multiple into a nested ifelse
+addh2$loveormoney <- ifelse(addh2$money > 
+                            addh2$love, 
+                            "moneymoreimport",
+                            ifelse(addh2$money == 
+                                  addh2$love,
+                                   "moneyequal", 
+                                  "lovemoreimport"))
+head(addh2[, c("love", "money", "loveormoney")], 3)
+
+```
+
+
+
+```{r}
+##choose an observation to test 
+participant1 <- addh2[1, ]
+participant1[, c("age", "gender", "income", "love", "money")]
+
+##run logical sequence
+part1result <- c()
+if(participant1$love >= 9 | participant1$money >= 9){
+  part1result <- "extreme"
+} else if (participant1$love > participant1$money){
+  part1result <- "lovegreater"
+} else if (participant1$love == participant1$money){
+  part1result <- "same"
+} else {
+  part1result <- "moneygreater"
+}
+part1result
+
+```
+
+
+```{r}
+part1result <- c()
+##run logical sequence
+if(participant1$love >= 9 | participant1$money >= 9){
+  part1result <- "extreme"
+} else if (participant1$love > participant1$money){
+  part1result <- "lovegreater"
+} else if (participant1$love == participant1$money){
+  part1result <- "same"
+} else {
+  part1result <- "moneygreater"
+}
+
+##what if we wanted to repeat with participant 2?
+participant2 <- addh2[2, ]
+
+##run sequence with participant 2
+part2result <- c()
+if(participant2$love >= 9 | participant2$money >= 9){
+  part2result <- "extreme"
+} else if (participant2$love > participant2$money){
+  part2result <- "lovegreater"
+} else if (participant2$love == participant2$money){
+  part2result <- "same"
+} else {
+  part2result <- "moneygreater"
+}
+
+##combine the two answers
+part1andpart2 <- c(part1result, part2result)
+part1andpart2
+
+```
+
+
+```{r}
+##initalize an empty vector
+loveormoney2 <- c()
+vec3050 <- seq(from = 1, to = 3050, by= 1)
+##for loop iterating through
+##obs 1, obs 2...obs 3050
+for(i in vec3050){
+  if(addh2$love[i] >= 9 | addh2$money[i] >= 9){
+  loveormoney2[i] <- "extreme"
+} else if (addh2$love[i] > addh2$money[i]){
+  loveormoney2[i] <- "lovegreater"
+} else if (addh2$love[i] == addh2$money[i]){
+  loveormoney2[i] <- "same"
+} else {
+  loveormoney2[i] <- "moneygreater"
+}
+}
+
+head(loveormoney2)
+length(loveormoney2)
+
+##append vector to data as new variable
+addh2$loveormoney2 <- loveormoney2
+
+##view selected results
+addh2[2505:2507, c("love", "money", "loveormoney2")]
+
+```
+
+
+```{r}
+
+##initialize empty matrix 
+sampmat <- matrix(NA, nrow = 1000, ncol = 3050)
+
+##iterate through each row of the matrix
+##and fill it with a sample of size 3050 from the data
+##note that because each i-th sample is filling a row,
+##we add that sample to the matrix by indexing the i-th row
+for(i in 1:nrow(sampmat)){
+  drawof3050 <- sample(addh$money, size = 3050, replace= TRUE)
+  sampmat[i, ] <- drawof3050
+}
+
+##check to make sure the for loop properly populated the matrix
+sampmat[1:2, 1:10]
+
+##find mean of each 1000 samples
+samplemeans <- rowMeans(sampmat)
+
+```
+
+
+```{r}
+##plot distribution of mean ratings
+##adding a vertical line for observed mean
+ggplot(as.data.frame(samplemeans), aes(x = samplemeans)) +
+  geom_density() +
+  geom_vline(xintercept = mean(addh$money),
+             col = "red", linetype = "dashed") +
+  theme_bw() 
+
+```
+
+
+```{r}
+##basic way to create a list
+listofthree <- list("one", c(1, 2), FALSE)
+listofthree
+
+```
+
+
+```{r}
+##creating using for loop
+
+##create vector of names of variables of intere
+variables <- c("income", "age", "gender")
+
+##create an empty object to store the summary
+##of each regression
+regobjects <- c()
+
+##for loop that iterates through each variable
+##and regresses the rating of money's importance
+##(money) on the variable
+for(i in 1:3){
+  reg <- summary(lm(substitute(money ~ i, list(i = as.name(variables[i]))),
+                    data = addh2))
+  regobjects[[i]] <- reg
+}
+
+```
+
+
+```{r}
+##print resulting list
+regobjects
+
+```
+
+
+```{r}
+##make a list with only the gender regression as a sublist
+gender.reg.list <- regobjects[2]
+class(gender.reg.list)
+gender.reg.list
+
+```
+
+
+```{r}
+##fully extract the gender regression so that it is an lm summary
+gender.reg.summary <- regobjects[[2]]
+class(gender.reg.summary)
+gender.reg.summary
+```
+
+
+
+```{r}
+##extract the coefficients and se's from the gender regression 
+gender.reg.coef <- regobjects[[2]][["coefficients"]]
+class(gender.reg.coef)
+gender.reg.coef
+```
+
+
+```{r}
+##base R
+paycol <- addh[, c("paypercent", "logpaypercent")]
+head(paycol, 3)
+
+##dplyr
+paycold <- select(addh, contains("pay"))
+head(paycold, 3)
+
+  
+```
+
+
+```{r}
+##base R
+nodebt <- addh[addh$debt == "nodebt" &
+      addh$income < 20000, ]
+nrow(nodebt)
+
+##dplyr
+nodebtd <- filter(addh, debt == "nodebt" &
+                    income < 20000) 
+nrow(nodebtd)
+
+```
+
+
+```{r}
+##base R
+moneyint <- addh[addh$money == 10, ]
+moneyint[order(moneyint$paypercent), ][1:2, ]
+
+##dplyr
+arrange(filter(addh, money == 10), paypercent)[1:2, ]
+
+## even better tidyverse
+addh %>% 
+  filter(money == 10) %>% 
+  arrange(paypercent) %>% 
+  head(2)
+```
+
+
+```{r}
+##base R
+addh$rateavg <- rowSums(addh[, c("love", "money", "nocheating")])/3
+addh$rateavglog <- log(addh$rateavg)
+head(addh[, c("love", "money", "nocheating", "rateavg", "rateavglog")], 3)
+
+##dplyr
+addhd <- mutate(addh,
+               rateavg = (love + money + nocheating)/3,
+               rateavglog = log(rateavg))
+head(select(addh, love, money, nocheating, rateavg, rateavglog), 3)
+
+
+```
+
+```{r}
+##base R- will learn apply family tomorrow
+tapply(addh$nocheating, addh$gender, mean)
+```
+
+```{r}
+##dplyr
+gender_group <- group_by(addh, gender)
+head(gender_group)
+summarise(gender_group,
+          meannocheat = mean(nocheating))
+
+```
+
+```{r}
+##base R
+table(addh$gender, addh$debt); prop.table(table(addh$gender, addh$debt))
+
+##distinct
+tapply(addh$love, list(addh$gender, addh$debt),
+                  function(x){length(unique(x))}) 
+
+```
+
+```{r}
+##dplyr
+genderdebt <- group_by(addh, gender, debt)
+summarise(genderdebt,
+          count = n(),
+          percent = n()/nrow(addh),
+          distinctlove = n_distinct(love))
+
+
+```
+
+```{r}
+arrange(summarise(group_by(addh, gender, debt), 
+                       nocheatavg = mean(nocheating),
+                       loveavg = mean(love),
+                       moneyavg = mean(money)), desc(moneyavg))
+```
+
+```{r}
+addh %>%
+  group_by(gender, debt) %>%
+  summarise(nocheatavg = mean(nocheating),
+            loveavg = mean(love),
+            moneyavg = mean(money)) %>%
+  arrange(desc(moneyavg))
+
+```
+```{r}
+addh %>% 
+  filter(money == 10) %>% 
+  arrange(paypercent) %>% 
+  head(10)
+```
+

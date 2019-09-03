@@ -8,13 +8,13 @@ The outline for the in-person portion of camp can be found below.
 
 Slides available [here](download/DayOneSlideshowCamp2019.pdf)
 
+Worksheet available [here](download/DayOneWorksheetCamp2019).
+
 1. Review of summer assignment topics: chain rule, derivatives of logs/exponents
 
 2. Two useful tools for optimization: higher-order derivatives and partial derivatives
 
 3. Simple univariate optimization
-
-*Slides will be posted prior to lecture*
 
 Resources:
 
@@ -26,17 +26,19 @@ Resources:
 
 **Lunch**
 
-*Qualitative methods speaker TBD*
+Speaker: Miguel Centeno
 
 **Coding:** Review of basics
+
+Slides available [here](download/Day_one_programming_final.pdf).
+
+Activity available [here](download/Day_one_programming_Student_Acitivty_Code.Rmd), data [here](download/addhealthlec1.csv).
 
 1. Summer review: indexing and manipulation of four main data structures (vectors, lists, matrices, and data.frames)
 
 2. Three data manipulation tools: logical statements, control flow, for loops
 
 3. Dplyr as a tool for data manipulation
-
-*Slides will be posted prior to lecture*
 
 Resources:
 
@@ -76,7 +78,7 @@ Resources:
 
 **Lunch**
 
-*Qualitative methods speaker TBD*
+Speaker: Grad student panel
 
 **Coding:** Functions, loops, and ifelse statements
 
@@ -114,7 +116,7 @@ Resources
 
 **Lunch**
 
-*Qualitative methods speaker TBD*
+Speaker: Mitch Duneier
 
 **Coding:** Data cleaning and manipulation
 
@@ -144,4 +146,4 @@ Resources
 
 **Lunch**
 
-*Qualitative methods speaker TBD*
+Speaker: Sanyu Mojola
