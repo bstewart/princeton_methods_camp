@@ -48,7 +48,11 @@ Resources:
 
 **Assignment One**
 
-*TBD*
+Assignment [PDF](download/2019_Day_1_Assignment.pdf) and [.Rmd](download/2019Day1Assignment.Rmd).
+
+Assignment [data](download/anespilot16.csv) and [codebook](download/anes_pilot_2016_CodebookUserGuide.pdf).
+
+Assignment [cheat sheet](download/2019_Day_1_Bonus_Content.pdf).
 
 Due: Day 2
 
