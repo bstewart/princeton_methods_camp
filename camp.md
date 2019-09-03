@@ -48,7 +48,7 @@ Resources:
 
 **Assignment One**
 
-Assignment [PDF](download/2019_Day_1_Assignment.pdf) and [.Rmd](download/2019Day1Assignment.Rmd).
+Assignment [PDF](2019_Day_1_Assignment_.pdf) and [.Rmd](download/2019Day1Assignment.Rmd).
 
 Assignment [data](download/anespilot16.csv) and [codebook](download/anes_pilot_2016_CodebookUserGuide.pdf).
 
