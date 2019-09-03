@@ -5,6 +5,9 @@ The outline for the in-person portion of camp can be found below.
 #### Day 1
 
 **Math:** Calculus
+
+Slides available [here](download/DayOneSlideshowCamp2019.pdf)
+
 1. Review of summer assignment topics: chain rule, derivatives of logs/exponents
 
 2. Two useful tools for optimization: higher-order derivatives and partial derivatives
