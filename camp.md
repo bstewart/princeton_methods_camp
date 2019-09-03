@@ -8,7 +8,7 @@ The outline for the in-person portion of camp can be found below.
 
 Slides available [here](download/DayOneSlideshowCamp2019.pdf)
 
-Worksheet available [here](download/DayOneWorksheetCamp2019).
+Worksheet available [here](download/DayOneWorksheetCamp2019.pdf).
 
 1. Review of summer assignment topics: chain rule, derivatives of logs/exponents
 
