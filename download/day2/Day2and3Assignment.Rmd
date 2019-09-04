@@ -1,0 +1,185 @@
+---
+title: 'Programming Assignment 2'
+author: "SOC Methods Camp"
+date: "September 4th and 5th, 2019"
+output: pdf_document
+---
+
+# Step zero: load the data (finalaedf.csv)
+
+Prompted by Andrew Wakefield's controversial, and since-retracted, article linking the MMR vaccine to autism, recent years have seen protests over childhood vaccination out of concerns that the vaccines will cause autism and other neurological problems.
+
+The data we'll be using relates to these issues. It is from the CDC's *Wonder* database and is comprised of reports that parents and/or physicians submit to the CDC reporting that a vaccine caused symptoms of autism and/or Asperger's. For today's activity, load the cleaned version of the data: *finalaedf.csv* and store it as *autismae*.
+
+
+# Step one: progress from a for loop with if/elseif/else statements to a function
+
+You're interested in treating age as a continuous variable, but notice that the data currently codes the variable as a factor variable with different levels. You want to create a new variable (*agenumeric*) that codes the age categories with the midpoint of the corresponding age range. 
+
+We'll do variations of this task with a for loop and then with a function.
+
+**Task one**: use a for loop and control flow statements (e.g., if/elseif/else) to explicitly outline each age category and manually enter its midpoint. So for instance, one of the conditionals, would be
+
+if(age == "1-2 years")\{ \newline
+  agenumeric <- 1.5 \newline
+\}
+
+Store the results in a vector *agenumeric*. Code "Unknown" as NA and code months using the appropriate fractions.
+
+**Task two**: You probably realized (or hoped!) when writing that loop that it was not the most efficient way to code that factor variable to the midpoint of the age categories. In particular, there are two issues:
+
+- Length: it took awhile to write that, and imagine if the categories had been more fine grained!
+- Potential for human error: regardless of your mental arithmetic skills or even if you confirmed each midpoint in R's console before inputting, it's inviting a mistake to happen to manually enter what the midpoint is rather than using a more reliable source (R's built-in calculator)
+
+The latter issue is particularly problematic, so we are interested in writing a function that finds the midpoint of the age category variable for every category, which automates this process a bit.
+  
+The actual "meat" part of this function involves some advanced programming and manipulation with regular expressions, which is something you do NOT need to worry about at this point. Instead, we want you to just practice generalizing a series of operations/commands into a function that can be applied more widely.
+
+First, to simplify this a bit, we want to focus only on reports about patients who are of known age and are at least one year old -- so filter out all of people that are of "Unknown" age or are less than 1 year old. 
+
+Note: even after you remove these observations, the data structure still remembers those two age categories,or "levels". Those levels are just empty now. Drop the empty levels with the "droplevels()" command, which you can pipe after your filter step.
+
+
+**Task three** Below is some code that takes in an age-category ("1-2 years"), removes the word "year", splits out the dash between the two numbers, converts those two numbers from character into numeric data, and then takes the mean of those two numbers (the mean of two numbers is their midpoint). First, we provide these series of operations as just one line of code, and then we break down what each command is doing in case you are curious (you can run each one to see what it's doing).
+
+(Again, it is totally okay if you don't fully understand what some of the commands below are doing! That is not the focus on this assignment.)
+
+```{r, eval = F}
+#one-line full version
+mean(as.numeric(unlist(strsplit(gsub("years", "", "1-2 years"), "-"))))
+```
+
+(breaking down in excruciating detail -- optional reading)
+```{r, eval = F}
+#breaking it down: inner most nested command
+#in this case, the "gsub" command searches the term "1-2 years"
+#and removes ("subs") the word "years"
+gsub("years", "", "1-2 years")
+
+#next: we use "strsplit" to split the character value we got
+#from the previous step into substrings and remove the dash
+strsplit(gsub("years", "", "1-2 years"), "-")
+
+#the previous step returns a list, which we then un-list
+unlist(strsplit(gsub("years", "", "1-2 years"), "-"))
+
+#now it's just a two-element character vector, 
+#which we turn into numeric
+as.numeric(unlist(strsplit(gsub("years", "", "1-2 years"), "-")))
+
+#now that we have a two-element numeric vector,
+#take the mean of the two numbers to find midpoint
+mean(as.numeric(unlist(strsplit(gsub("years", "", "1-2 years"), "-"))))
+```
+
+It is always good practice to test the commands in your function before you write it in function format. Try to run that series of commands on "6-17 years" instead of "1-2 years" to make sure it works.
+
+**Task four** Now, generalize the above commands into a function that can be run on any element of the "age" vector in the *autismae* dataset. Save this function as *agemidfunc*.
+
+
+**Task five**: use sapply to apply the function to every element of the data's age vector. Store the result (so don't transform directly) as a new variable in your data as *agemidfuncresult*
+
+
+---
+
+# Step two: using functions to structure data in a way useful for plotting
+
+We're going to be creating a function that creates and arrays plots of an *individual state's* trends in the counts of parent reports of vaccine events over time.
+
+**Task one**: to make the next steps easier, restrict the data to exclude observations that are missing the year ("Unknown Date") 
+
+
+**Task two**: before moving to the function, we're going to get the data in a format that is easier to feed the function. Create a new data.frame, *stateyearcounts*, that indicates the number of cases per year for each state. Practice doing this using dplyr and pipes.
+
+
+---
+
+# Step three: using functions to plot
+
+**Task zero** Load the data: stateyearreports.csv. Is this data tidy? Why or why not? (hint: can you imagine easily plotting the number of reports by year for every state?). If not, tidy the data.
+
+
+
+
+**Task one**: We're going to plot in two steps: 
+
+1. Creating two plots outside a function to get the code correct
+2. Generalizing to a function that will plot the counts by year for any group of states you choose 
+
+First, use ggplot to create separate plots for the counts of autism-related vaccine reports by year for two states-- New Jersey and New York--side by side. You can either do a bar or line graph. Make sure the title indicates which state it is and make sure the two plots have the same y axis range for comparability purposes (0 to the maximum reports out of the two)
+
+
+
+**Task two**: now generalize into a function that can do the following:
+
+- Take in a vector of state names
+- Iterate through that vector and with each state, create and store a plot of that state's autism reports per year
+- Return a list containing all the stored plots (the length of the list will be equal to the number of states you specified in the vector of state names)
+
+Store the function
+
+*Hint*: Look at the above code for the two states. What did you change when copying and pasting? How can you subset the vector to give you the name of the state for the title and plot?
+
+*Note:* This may be a challenging problem! If you find yourself spending a long time on it, send Liv and Katie an email! Don't sacrifice sleep trying to get it right.
+
+
+
+**Task three**: Run the function with different groups of states that you're interested in comparing (e.g., you could create a vector with the state where you grew up, the state where you went to college, and the state you're in now, and plot graphs for each). 
+
+Try with at least two different groups of states and store the results.
+
+
+
+---
+
+# Step four: troubleshooting errors in functions
+
+You can use conditionals inside the function to print informative error messages when something goes wrong. Here, we're going to practice using those conditionals in the context of potential errors.
+
+We provide you with a function, *sample.subset* that does the following:
+
+- Takes the following arguments: data, number of draws (numdraws), the variable we want to take the mean of during the draw (varofinterest), i (number of times to draw from the sample), an empty vector to store the means (vecformeans),  a logical flag to indicate whether the sampling should be with or without replacement (replaceornot)
+- The function uses the sample command with the following arguments: sample from a numeric vector with 1...number of rows in the data, the number of samples = the number of draws argument, and whether it replaces or not equals the replaceornot argument
+- Then, the function subsets data based on those row ids and find the mean age from the numeric version of the variable (there are NA's in the data so make sure the arguments for mean still allow you to ignore those and still calculate)
+- The function repeats that process $i$ times and store the means in a vector
+- The function returns that vector of means that's equal to the number of iterations
+
+
+
+```{r, eval = F}
+#ran outside the function once
+rows_sampled <- sample(1:nrow(autismae), 
+                       100, replace = FALSE) 
+
+dfsamp <- autismae[rows_sampled, ]
+mean(dfsamp$agenumeric, na.rm = TRUE)
+
+#generalized to a function
+sample.subset <- function(varofinterest, data, numdraws, 
+                       replaceornot = FALSE, i, 
+                          vecformeans){
+  rows_sampled <- sample(1:nrow(data), 
+                  numdraws, replace = replaceornot)
+  df_sample <- data[rows_sampled, varofinterest]
+  sample_mean <- mean(df_sample, na.rm = TRUE)
+  vecformeans <- c(vecformeans, sample_mean)
+  return(vecformeans)
+}
+```
+
+
+**Task one**: use a function in the apply family to run the function for five iterations (i = 5) with 100 draws each iteration. Store the results in a vector. 
+
+
+
+**Task two**: now, run the function for five iterations (i = 5) with 2000 draws each iteration and the replacement flag still set to false. It should return an error. What's happening?
+
+
+
+**Task three**: the error message is already pretty informative so no need to write our own. Instead, add a condition to the function that checks if the number of draws is greater than the number of rows in the dataframe. If that is the case, then the function should round the number of draws down to 0.9 x the number of rows in the data.frame and proceed with the rest of the steps (sampling, subsetting the data, finding the mean age)
+
+
+
+**Task four**: practice applying that function to two cases: a case where the number of draws exceeds the number of rows in the data and a case where the number of draws is less than the number of rows in the data to confirm that the function works in either case.
+
+
