@@ -102,7 +102,7 @@ Assignment [PDF](download/day2/Day2and3Assignment.pdf) and [.Rmd](download/day2/
 
 Data files: [1](download/day2/childmh.csv), [2](download/day2/finalaedf.csv), [3](download/day2/stateyearreports.csv), [4](download/day2/stateyears.csv).
 
-Assignment [cheat sheet](Day2and3Assignment_Bonus_Content.pdf).
+Assignment [cheat sheet](download/day2/Day2and3Assignment_Bonus_Content.pdf).
 
 Due Day 4.
 
