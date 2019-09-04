@@ -6,9 +6,9 @@ The outline for the in-person portion of camp can be found below.
 
 **Math:** Calculus
 
-Slides available [here](download/DayOneSlideshowCamp2019.pdf)
+Slides available [here](download/day1/DayOneSlideshowCamp2019.pdf)
 
-Worksheet available [here](download/DayOneWorksheetCamp2019.pdf).
+Worksheet available [here](download/day1/DayOneWorksheetCamp2019.pdf).
 
 1. Review of summer assignment topics: chain rule, derivatives of logs/exponents
 
@@ -30,9 +30,9 @@ Speaker: Miguel Centeno
 
 **Coding:** Review of basics
 
-Slides available [here](download/Day_one_programming_final.pdf).
+Slides available [here](download/day1/Day_one_programming_final.pdf).
 
-Activity available [here](download/Day_one_programming_Student_Acitivty_Code.Rmd), data [here](download/addhealthlec1.csv).
+Activity available [here](download/day1/Day_one_programming_Student_Acitivty_Code.Rmd), data [here](download/day1/addhealthlec1.csv).
 
 1. Summer review: indexing and manipulation of four main data structures (vectors, lists, matrices, and data.frames)
 
@@ -48,17 +48,21 @@ Resources:
 
 **Assignment One**
 
-Assignment [PDF](download/2019_Day_1_Assignment_.pdf) and [.Rmd](download/2019Day1Assignment.Rmd).
+Assignment [PDF](download/day1/2019_Day_1_Assignment_.pdf) and [.Rmd](download/day1/2019Day1Assignment.Rmd).
 
-Assignment [data](download/anespilot16.csv) and [codebook](download/anes_pilot_2016_CodebookUserGuide.pdf).
+Assignment [data](download/day1/anespilot16.csv) and [codebook](download/day1/anes_pilot_2016_CodebookUserGuide.pdf).
 
-Assignment [cheat sheet](download/2019_Day_1_Bonus_Content.pdf).
+Assignment [cheat sheet](download//day1/2019_Day_1_Bonus_Content.pdf).
 
 Due: Day 2
 
 #### Day 2
 
 **Math:** Matrix algebra
+
+Slides available [here](download/day2/DayTwoSlideshowCamp2019.pdf).
+
+Worksheet available [here](download/day2/Linear_algebra_worksheet_.pdf).
 
 1. Vectors and matrices
 
@@ -69,8 +73,6 @@ Due: Day 2
 4. Rank and inverse of matrices
 
 5. Matrix applications: distance measures, dimension reduction, solving linear systems of equations
-
-*Slides will be posted prior to lecture*
 
 Resources:
 
@@ -86,15 +88,21 @@ Speaker: Grad student panel
 
 **Coding:** Functions, loops, and ifelse statements
 
+Slides available [here](download/day2/Final_slides_for_programming_day_two_functions_and_apply.slides.pdf).
+
+R code available [here](download/day2/programming day two functions and apply.R).
+
 1. Functions
 
 2. Loops and ifelse statements
 
-*Slides will be posted prior to lecture*
-
 **Assignment Two**
 
-*TBD*
+Assignment [PDF](download/day2/Day2and3Assignment.pdf) and [.Rmd](download/day2/Day2and3Assignment.Rmd).
+
+Data files: [1](download/day2/childmh.csv), [2](download/day2/finalaedf.csv), [3](download/day2/stateyearreports.csv), [4](download/day2/stateyears.csv).
+
+Assignment [cheat sheet](Day2and3Assignment_Bonus_Content.pdf).
 
 Due Day 4.
 
