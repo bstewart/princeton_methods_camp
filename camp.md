@@ -54,7 +54,7 @@ Assignment [data](download/day1/anespilot16.csv) and [codebook](download/day1/an
 
 Assignment [cheat sheet](download//day1/2019_Day_1_Bonus_Content.pdf).
 
-[Solutions](download/day1/2019_Day_1_Assignment_Solutions.pdf). 
+[Solutions](download/day1/2019_Day_1_Assignment_Solutions.pdf).
 
 Due: Day 2
 
@@ -112,6 +112,10 @@ Due Day 4.
 
 **Math:** Basic probability
 
+Slides available [here](download/day3/DayThreeSlideshowCamp2019.pdf).
+
+Worksheet available [here](download/day3/DayThreeWorksheet.pdf).
+
 1. Counting, sets, methods of counting and sampling
 
 2. Conditional probability and Bayes' Rule
@@ -133,6 +137,10 @@ Resources
 Speaker: Mitch Duneier
 
 **Coding:** Data cleaning and manipulation
+
+Slides available [here](download/day3/day3slides_final.slides.pdf).
+
+Practice data available [here](download/day3/gss.reshape.example.csv).
 
 - Matrix algebra in R
 
