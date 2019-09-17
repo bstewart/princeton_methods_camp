@@ -108,6 +108,8 @@ Assignment [cheat sheet](download/day2/Day2and3Assignment_Bonus_Content.pdf).
 
 Due Day 4.
 
+Solutions available [here](download/day2/Day2and3AssignSolutions.pdf).
+
 #### Day 3
 
 **Math:** Basic probability
@@ -164,7 +166,9 @@ Practice data available [here](download/day3/gss.reshape.example.csv).
 
 **Final Project**
 
-*TBD*
+Prepare a brief report, applying what we've learned to the Stanford Open Policing data.
+
+Assignment available [here](download/Final_Activity.pdf).
 
 **Lunch**
 
