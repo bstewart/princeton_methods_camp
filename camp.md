@@ -54,8 +54,6 @@ Assignment [data](download/day1/anespilot16.csv) and [codebook](download/day1/an
 
 Assignment [cheat sheet](download//day1/2019_Day_1_Bonus_Content.pdf).
 
-[Solutions](download/day1/2019_Day_1_Assignment_Solutions.pdf).
-
 Due: Day 2
 
 #### Day 2
@@ -107,8 +105,6 @@ Data files: [1](download/day2/childmh.csv), [2](download/day2/finalaedf.csv), [3
 Assignment [cheat sheet](download/day2/Day2and3Assignment_Bonus_Content.pdf).
 
 Due Day 4.
-
-Solutions available [here](download/day2/Day2and3AssignSolutions.pdf).
 
 #### Day 3
 
