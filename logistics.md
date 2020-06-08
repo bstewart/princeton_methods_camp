@@ -1,5 +1,7 @@
 ## Logistics
 
+This section contains information on important dates and other logistical concerns.
+
 **Important Dates:**
 
 June 26th: Assignment 1 due
