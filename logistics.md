@@ -1,21 +1,19 @@
 ## Logistics
 
-**Dates of camp:** Tuesday September 3rd to Friday September 6th.
+**Important Dates:**
 
-**Time structure of camp:**
+June 26th: Assignment 1 due
 
-Breakfast: 9:00 AM
+July 24th: Assignment 2 due
 
-Morning session, math: 9:30 - 11:30 AM
+August 3rd: Math lessons begin
 
-Lunch session(qualitative methods): 12:00 - 1:30 PM
+August 24th-25th, 28th: Coding lessons
 
-Afternoon session, programming: 2:00 - 4:00 PM
+**Individual Check-ins:**
 
-**Location:** 165 Wallace Hall
+Liv and Joe will be setting up individual Zoom check-ins at the end of June and in mid-July. We can accommodate time zone differences as needed.
 
-**Office hours:** Katie and Liv will hold office hours from 4pm-6pm every day but Friday, and will be available by email in the evenings to answer additional questions. 
+**Slack:**
 
-We use Piazza for all our of course communications. Please ensure you have
-signed up to the course
-[here](http://piazza.com/princeton/summer2019/socsmc/home).
+Our primary means of communication and your primary resource for answering questions will be the camp Slack. Please post questions publicly whenever possible, but you can also direct message Liv and Joe.

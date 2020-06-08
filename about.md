@@ -6,6 +6,7 @@ The Sociology Summer Methods Camp began in 2016, and the materials that we curre
 - 2017: Janet Xu, Xinyi Duan (graduate student instructors) and Matthew Salganik (faculty adviser).
 - 2018: Xinyi Duan, Katie Donnelly (graduate student instructors) and Brandon Stewart (faculty adviser).
 - 2019: Katie Donnelly, Liv Mann (graduate student instructors) and Matthew Salganik (faculty adviser).
+- 2020: Liv Mann, Joe Sageman (graduate student instructors) and Brandon Stewart (faculty adviser).
 
 We would also like to acknowledge the many other people who have shaped the material including: the instructional staff of the Math Camp for the Department of Politics at Princeton and the instructional staff of the Math Camp for the Department of Government at Harvard.
 
