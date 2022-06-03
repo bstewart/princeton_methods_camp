@@ -1,19 +1,19 @@
 ## Camp
 
-Camp this year will consist of two components: online math lessons and coding lessons (either online or in person, TBD).
+In-person camp details are still being finalized and are subject to change. In past years, there have been 4 days of camp during the week prior to the start of the fall semester. Typically, the schedule for the on-campus portion of camp has looked something like the following: 
 
-#### Math Lessons
+#### Typical daily schedule 
 
-Math lessons will begin on August 3rd 2020 and last for three weeks. The weekly schedule will be:
+Breakfast: 9:00 AM
 
-**Monday:** live lecture, to be recorded and posted to Slack for asynchronous access.
+Morning session, math: 9:30 - 11:30 AM
 
-**Wednesday:** lecture worksheet due
+Lunch session / speaker covering qualitative methods / student panel: 12:00 - 1:30 PM
 
-**Sunday:** homework assignment due
+Afternoon session, programming: 2:00 - 4:00 PM
 
-We will release more detailed information about math lessons in July.
+**Location:** 165 Wallace Hall
 
-#### Coding Lessons
+**Office hours**: 4:00 PM - 6:00 PM (*Note*: in the past, students have found it helpful to use office hours as a time to just work on the homework together in one place)
 
-Coding lessons will be held August 24th-25th and August 28th. At this time we do not know if lessons will be held virtually or in-person. We will update you as we receive more information. Coding lesson schedule to be released in August.
+Assignments are due the next day of camp. There may be a minor final project to complete during the last day of camp.

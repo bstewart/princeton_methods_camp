@@ -23,8 +23,8 @@ navigation:
     url: "#about"
 ---
 
-# Princeton Sociology Summer Methods Camp 2020
+# Princeton Sociology Summer Methods Camp 2022
 
 The Princeton Sociology Summer Methods Camp gives incoming Sociology PhD students a running start at the beginning of their PhD program. The computational and statistical training provides necessary foundation for statistics and methods classes. We understand that participants come into the program with different backgrounds and experiences, and the Summer Methods Camp will be helpful for everyone, regardless of background.
 
-This 2020 Summer Methods Camp will take place in several parts due to the COVID-19 pandemic. Math lessons will begin virtually August 3rd. Coding lessons will be either virtual or in-person (TBD) and will take place August 24th-25th and 28th. Liv Mann and Joe Sageman are this year's graduate student instructors and Professor Brandon Stewart is faculty advisor.
+This 2022 Summer Methods Camp will (likely) take place Monday, August 29 to Friday, June 2, 2022 from 9am to 4pm in 165 Wallace Hall. Joe Sageman and Angela are this year's graduate student instructors and Professor Brandon Stewart is faculty advisor. There will be a small number of summer assignments during the summer before in-person Methods Camp.
