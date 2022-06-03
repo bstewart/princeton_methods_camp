@@ -2,7 +2,7 @@
 
 #### Background Math Reading
 
-The textbook we will use for Methods Camp is *Essential Mathematics for Political and Social Research* by Jeff Gill. We are including some notes on the readings so that you can take a look at the material ahead of time if you would like. This may be useful it it's been a while since your last math course. **Note: You are not expected to master the topics covered in the readings by the time you arrive at camp!** These readings and the summer assignments are meant as a first introduction to what we'll be covering during the camp itself.
+The textbook we will use for Methods Camp is *Essential Mathematics for Political and Social Research* by Jeff Gill. We are including some notes on the readings so that you can take a look at the material ahead of time if you would like. This may be useful if it's been a while since your last math course. **Note: You are not expected to master the topics covered in the readings by the time you arrive at camp!** These readings and the summer assignments are meant as a first introduction to what we'll be covering during the camp itself.
 
 **Chapter 1: The Basics**
 
