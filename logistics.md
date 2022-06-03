@@ -1,21 +1,23 @@
 ## Logistics
 
-This section contains information on important dates and other logistical concerns.
+This section contains information on important dates and other logistical concerns. These are still being finalized and subject to change.
 
 **Important Dates:**
 
-June 26th: Assignment 1 due
+June 24th: Assignment 1 due
 
-July 24th: Assignment 2 due
+Late July / early August / late August: Assignment 2 due (3 subsections)
 
-August 3rd: Math lessons begin
+August 29 - September 2: In-person methods camp
 
-August 24th-25th, 28th: Coding lessons
+**Ed Discussion:**
 
-**Individual Check-ins:**
+Our primary means of communication and your primary resource for answering questions will be through the Ed discussion board. Please post questions publicly whenever possible, but you can also post your questions privately for Joe and Angela to answer.
 
-Liv and Joe will be setting up individual Zoom check-ins at the end of June and in mid-July. We can accommodate time zone differences as needed.
+**Canvas:**
 
-**Slack:**
+Assignments and additional resources will be posted to our Canvas site under "Modules". Reach out if you have not received an invite to the site.
 
-Our primary means of communication and your primary resource for answering questions will be the camp Slack. Please post questions publicly whenever possible, but you can also direct message Liv and Joe.
+**Gradescope:**
+
+We will ask you to submit completed assignments to our Gradescope site. This will be the same platform used to turn in your assignments for SOC 500, so we hope this will familiarize you with the platform before the start of the school year.
