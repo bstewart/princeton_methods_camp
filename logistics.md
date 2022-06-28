@@ -4,9 +4,13 @@ This section contains information on important dates and other logistical concer
 
 **Important Dates:**
 
-June 24th: Assignment 1 due
+June 24: Assignment 1 due
 
-Late July / early August / late August: Assignment 2 due (3 subsections)
+July 29: Assignment 2 Part 1 due 
+
+August 12: Assignment 2 Part 2 due
+
+August 22: Assignment 2 Part 3-5 due (or turn all of Assignment 2 on this date)
 
 August 29 - September 2: In-person methods camp
 
