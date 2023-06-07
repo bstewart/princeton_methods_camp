@@ -4,19 +4,15 @@ This section contains information on important dates and other logistical concer
 
 **Important Dates:**
 
-June 24: Assignment 1 due
+June 24: Last date to submit assignment 1
 
-July 29: Assignment 2 Part 1 due 
+August 11: Last date to sunmit assignment 2
 
-August 12: Assignment 2 Part 2 due
-
-August 22: Assignment 2 Part 3-5 due (or turn all of Assignment 2 on this date)
-
-August 29 - September 2: In-person methods camp
+August 22 - August 25: In-person methods camp
 
 **Ed Discussion:**
 
-Our primary means of communication and your primary resource for answering questions will be through the Ed discussion board. Please post questions publicly whenever possible, but you can also post your questions privately for Joe and Angela to answer.
+Our primary means of communication and your primary resource for answering questions will be through the Ed discussion board. Please post questions publicly whenever possible, but you can also post your questions privately for Angela and Varun to answer.
 
 **Canvas:**
 
