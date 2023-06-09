@@ -1,7 +1,3 @@
-## Camp
-
-In-person camp will take place on Monday, Tuesday, and Friday. The daily schedule for the on-campus portion of camp will be as follows (subject to change):
-
 #### Methods Camp 2022 Schedule 
 
 Breakfast: 9:00 - 9:30 AM
