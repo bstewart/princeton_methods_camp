@@ -20,7 +20,7 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 - Two tools useful for optimization: higher-order derivatives and partial derivatives 
 - Preview simple case of univariate optimization
 
-**Lunchtime qualitative speaker**: TBC 
+**Lunchtime speaker**: TBC 
 
 **Computing**: Review of Basics
 
@@ -38,12 +38,13 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 - Rank, inverse of a matrix 
 - Matrix applications: distance measures, dimension reduction, using matrices to solve systems of linear equations
 
-**Lunchtime qualitative speaker**: TBC
+**Lunchtime speaker**: TBC
 
 **Computing**: Functions and the Apply family
 
 - Functions
 - Apply family 
+- Iteration
 
 
 ## Day 3
@@ -51,10 +52,10 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 **Math**: Basic Probability
 
 - Counting, sets, methods of counting and sampling
-- Conditional Probability and Baye's Rule
+- Conditional Probability and Bayes' Rule
 - Independence 
 
-**Lunchtime qualitative speaker**: TBC
+**Lunchtime speaker**: TBC
 
 **Computing**: Data Cleaning and more Advanced Manipulation
 
@@ -66,7 +67,7 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 
 ## Day 4
 
-**Math**: Basic Optimization; Open-ended Q \& A
+**Math**: Basic Optimization; Open-ended Q & A
 
 - Numerical optimization: Newton-Raphson
 - Maxima and minima: critical points, Hessians
@@ -75,9 +76,9 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 - (if there is time) Optimization beyond univariate case: quadratic form notation
 - Open-ended Question and Answer session about material covered this week
 
-**Lunchtime qualitative speaker**: TBC
+**Lunchtime speaker**: TBC
 
-**Computing**: Plotting and Review of Day 1 material; Open-ended Q \& A
+**Computing**: Plotting and Review of Day 1 material; Open-ended Q & A
 
 - Preparing data to plot
 - Plotting using ggplot2
