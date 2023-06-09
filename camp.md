@@ -51,7 +51,7 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 **Math**: Basic Probability
 
 - Counting, sets, methods of counting and sampling
-- Conditional Probability and Baye's Rule
+- Conditional Probability and Bayes' Rule
 - Independence 
 
 **Lunchtime qualitative speaker**: TBC
