@@ -44,6 +44,7 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 
 - Functions
 - Apply family 
+- Iteration
 
 
 ## Day 3
