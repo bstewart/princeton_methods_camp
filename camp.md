@@ -20,9 +20,6 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 - Two tools useful for optimization: higher-order derivatives and partial derivatives 
 - Preview simple case of univariate optimization
 
-      - Vector derivatives and integrals: [Vector differentiation video](https://www.youtube.com/watch?v=iWxY7VdcSH8)
-      - Chain rule: [Chain rule problems + solutions](http://www.mathscoop.com/calculus/derivatives/the-chain-rule.php)
-
 **Lunchtime qualitative speaker**: TBC 
 
 **Computing**: Review of Basics
