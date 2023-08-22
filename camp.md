@@ -16,11 +16,12 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 
 **Math**: Calculus and its Applications
 
-- Review of summer assignment topics: chain rule, derivatives of logs/exponents
-- Two tools useful for optimization: higher-order derivatives and partial derivatives 
-- Preview simple case of univariate optimization
+- What is a deriative and why are we learning about them?
+- Rules for logs and exponents
+- Higher-order derivatives
+- Partial derivatives
 
-**Lunchtime speaker**: TBC 
+**Lunchtime speaker**: Adam Goldstein
 
 **Computing**: Review of Basics
 
@@ -30,15 +31,14 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 
 ## Day 2
 
-**Math**: Matrix Algebra
+**Math**: Linear Algebra
 
-- Vectors -> matrices
-- Addition, subtraction, multiplication
-- Linear independence
-- Rank, inverse of a matrix 
-- Matrix applications: distance measures, dimension reduction, using matrices to solve systems of linear equations
+- What are vectors?
+- Vector operations (addition/subtraction and the dot product)
+- What are matrices?
+- Matrix operations (addition/subtraction and matrix multiplication)
 
-**Lunchtime speaker**: TBC
+**Lunchtime speaker**: Patricia Fernandez-Kelly
 
 **Computing**: Functions and the Apply family
 
@@ -51,11 +51,14 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 
 **Math**: Basic Probability
 
-- Counting, sets, methods of counting and sampling
-- Conditional Probability and Bayes' Rule
-- Independence 
+- Why do we need probability?
+- Counting
+- Sets and operations on sets
+- Experiments, events, and sample spaces
+- An introduction to probability
+- The law of total probability, Bayes' rule, and independence
 
-**Lunchtime speaker**: TBC
+**Lunchtime speaker**: Janet Vertesi
 
 **Computing**: Data Cleaning and more Advanced Manipulation
 
@@ -67,22 +70,7 @@ Afternoon session, programming : *2:00 - 4:00 PM*
 
 ## Day 4
 
-**Math**: Basic Optimization; Open-ended Q & A
-
-- Numerical optimization: Newton-Raphson
-- Maxima and minima: critical points, Hessians
-- Application: Likelihood Functions 
-- (if there is time) Optimization beyond univariate case: multivariable function
-- (if there is time) Optimization beyond univariate case: quadratic form notation
-- Open-ended Question and Answer session about material covered this week
-
-**Lunchtime speaker**: TBC
-
-**Computing**: Plotting and Review of Day 1 material; Open-ended Q & A
-
-- Preparing data to plot
-- Plotting using ggplot2
-- Open-ended Question and Answer session about material covered this week
+In day 4 we will be working on a mini-project with the Stanford Open Policing Project's data ([link](https://openpolicing.stanford.edu/data/)). 
 
 
 
