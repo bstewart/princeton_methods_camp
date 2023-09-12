@@ -29,7 +29,4 @@ The Princeton Sociology Summer Methods Camp gives incoming Sociology PhD student
 
 This 2023 Summer Methods Camp will take place on 4 days: Thursday, August 24; Friday, August 25; Monday, August 28; Tuesday, August 29. Camp will run from 9am to 4pm in 165 Wallace Hall. Angela Li and Varun Satish are this year's graduate student instructors and Professor Matthew Salganik is the faculty advisor. There will be 2 summer assignments due over the summer before the in-person portion of Methods Camp.
 
-https://github.com/bstewart/princeton_methods_camp/tree/master/download
-
-
-We have made code and slides used in the 2023 methods camp available here: <a href="(https://github.com/bstewart/princeton_methods_camp/tree/master/download)">Princeton Methods Camp GitHub</a>. Thank you to Angela Li for creating these resources!
+We have made code and slides used in the 2023 methods camp available on the [Princeton Methods Camp GitHub page](https://github.com/bstewart/princeton_methods_camp/tree/master/download). Thank you to Angela Li for creating these resources!
