@@ -1,0 +1,502 @@
+---
+title: "Methods Camp Coding: Day 3"
+subtitle: "Princeton Sociology Methods Camp"
+author: "Your Name"
+institute: "Princeton University"
+date: "August 28, 2023"
+format: pdf
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Warm up: Searching For Help
+
+With a partner, brainstorm 3 strategies you can take when you run across a task
+in your homework that you're not sure how to complete, or requires something slightly
+different from what you covered in class. How long would you spend
+on each one?
+
+1. 
+2. 
+3. 
+
+How would you evaluate the help you get?
+
+- [idea]
+- [idea]
+- [idea]
+
+Other folks have thought about this question. Remember: searching efficiently 
+is a learned skill, and takes practice! (This is true in terms of grad school/research
+in general as well as coding.)
+
+- Advice from [Ella Kaye](https://ellakaye.rbind.io/talks/2020-10-29-how-to-get-help-in-r/), 
+[Maelle Salmon](https://masalmon.eu/2018/07/22/wheretogethelp/), [Oscar Baruffa](https://www.r-bloggers.com/2021/12/how-to-google-r-stuff/)
+
+# Load Add Health data
+
+Let's reload the AddHealth data from yesterday.
+
+```{r wd, message=F, warning=F}
+# Load any packages needed
+
+# Load data
+
+```
+
+The codebook from the survey is online [here](https://addhealth.cpc.unc.edu/documentation/codebook-explorer/#/variable_collection/1573).
+
+# Debugging / Troubleshooting
+
+Debugging is a large part of learning to code. When you start coding, you will probably encounter errors a lot. As you encounter these errors over and over again, you will form a mental model of how to fix them. 
+
+Fix the following pieces of 
+incorrect code! (Change eval = T so that the chunk runs)
+
+```{r debug, eval=F}
+# Fix the following pieces of incorrect code!
+summary(adddh)
+
+read.cvs("addhealthday1.csv")
+
+filter(addh, age = 20)
+
+ggplot(addh, aes(x = age)) %>%
+  geom_histogram()
+```
+
+### Your Turn
+
+Try to knit this document with the following buggy code. It won't knit! 
+
+```{r intentional-bad-knit, eval=F}
+badvec <- c(1, 2, 3, 4,)
+```
+
+In your group, brainstorm: what strategies can we use to knit this document?
+
+1. 
+2.
+3. 
+
+Debugging long strings of code is harder. You might need to go small step by step, 
+building from little pieces (either by line, or by nested function), so you can detect the problem.
+
+To debug the ggplot call below, run the first line (without the +). Then run the first and second lines.
+Then run the first, second, and third lines. And so on until you've found the problem. 
+
+**Question**: Which line is causing the problem? (Bonus: can you find the bug?)
+
+```{r intentional-ggplot-bug, eval=F}
+ggplot(as.data.frame(sample_means), aes(x = sample_means)) +
+  geom_density() +
+  geom_vline(xintercept = mean(addh4$imp_love),
+             col = "red", linetype = "dashed") +
+  geom_vline(xintercept = mean(addh$imp_love),
+             col = "blue", lintype = "dashed") +
+  theme_bw() 
+```
+
+To debug the nested functions below - preview of the HW, run the inside function 
+(gsub). Then run the next nested function (gsub and strsplit). 
+Then all three nested functions, and so on.
+
+**Question**: Which function is throwing the error? (Bonus, hard: can you find the bug?)
+
+```{r intentional-strsplit-bug, eval=F}
+mean(as.numeric(unlist(strsplit(gsub("years", "", "1-2 years"), -))))
+```
+
+**Bonus Question**: Can you rewrite this using the native R pipe, with the corrected bug?
+
+This is easier to debug because you can see each line of code and run it step by step!
+
+# Functions - Basics
+
+We've worked with a number of functions, but we can also write our own. For 
+example, we can write code to standardize data (also know as a "z-score" in some cases).
+
+```{r standardize-fxn}
+
+```
+
+### Your Turn
+
+Create a new column in the `scores_df` dataframe called "zscores" for the
+standardized scores. Save it back to `scores_df`.
+
+```{r scores}
+# create sample test scores
+
+```
+
+R has a built in function called `scale()` that does the same thing as our function - go ahead and
+try it out! Add a new column called `zscores2` created by using the scale() function.
+
+Does this new column look the same?
+
+```{r}
+
+```
+
+### Your Turn - Bonus
+
+We don't want our function to try to standardize data that is a character, so we include some logical checks and an error message. What will the following code produce if we run `standardize()` on a character vector?
+
+```{r fxn-checks, eval=F}
+# rewrite function with a check
+standardize <- function(x) {
+  
+  if(is.character(x)) {
+    print("This function requires a numeric vector")
+  }
+  
+  else {
+    zscore <- (x - mean(x)) / sd(x)
+    return(zscore)
+  }
+  
+}
+
+# test it out!
+standardize(addh$id)
+```
+
+# For loops review - sampling
+
+In the next bit of code, we'll take a random sample with replacement from a 
+numeric variable in our data. We'll then take the mean of the variable in the sample. 
+Finally, we will repeat this process 1000 times. 
+
+We'll first create a new dataframe with just respondents with "high income".
+
+```{r subset-high-inc}
+# get the 75th percentile of this group to define "high income"
+inc75 <- quantile(addh$income)[4]
+
+# make new binary variable for if respondent has high income
+addh <- addh %>%
+  # make this variable a factor!
+  mutate(income_high = factor(ifelse(income > inc75, 1, 0),
+                              levels = c(0, 1),
+                              labels = c("not high", "high")))
+
+# filter by high income
+
+```
+
+Then, we'll sample once and take the mean of our sample.
+
+```{r sample-one-iteration}
+
+```
+
+Next, we'll stick our code into a (draft) for loop.
+
+```{r for-loop-scratch}
+
+```
+
+Finally, we'll optimize our for loop and save the output.
+
+```{r for-loop-final}
+
+```
+
+We can visualize the distribution of these new means!
+
+```{r vis-for-loop}
+# plot it!
+
+```
+
+
+### Your Turn
+
+Tweak the above for loop to have the following changes:
+
+- sample size of 500 for each sample
+- look at the `love` variable instead
+- produce 5,000 total samples (and thus 5,000 means)
+
+What's the mean of the distribution of means?
+
+```{r for-loop-2}
+
+```
+
+Visualize the distribution of the sample means using similar code as above.
+
+```{r vis-for-loop-2}
+ 
+```
+
+Changing small things about the for loop every time we want to change the sample
+size can be annoying, so today we will introduce writing functions and {purrr} package!
+
+### Your Turn - Bonus
+
+Add another vertical line on your graph for the average importance of love of the whole sample (not just high inc folks) for comparison.
+
+```{r add-vert-line}
+
+```
+
+
+# Functions - Sampling
+
+We can also adapt the above code for sampling into a function. To write a function, we want to think about what goes in and what comes out. 
+
+We also want to think about code that repeats vs. code that changes.
+
+Note: this next bit requires some abstraction, which is a skill that requires
+practice! It will come with time.
+
+```{r compare-sampling-code, eval=F}
+# Code from above
+sample_means <- numeric(length = 1000)
+for (i in seq_along(sample_means)) {
+  samp <- sample(addh4$imp_money, size = 1000, replace = TRUE)
+  samp_mean <- mean(samp)
+  sample_means[i] <- samp_mean
+}
+
+sample_means
+
+# Code from Your Turn - slightly different
+sample_means <- numeric(length = 5000)
+for (i in seq_along(sample_means)) {
+  samp <- sample(addh4$imp_love, size = 500, replace = TRUE)
+  samp_mean <- mean(samp)
+  sample_means[i] <- samp_mean
+}
+
+sample_means
+```
+
+### Your Turn
+
+What are the three aspects of the function that we changed? Write them below.
+
+1. 
+2.
+3. 
+
+We can use this to abstract out our code. The things that changed can be the 
+**arguments** or **inputs** to our function!
+
+What do we want to **output** or **return** from our function? Brainstorm possible ideas with a partner.
+
+1.
+2.
+
+We can set function **defaults** if we want, too. Are there any numbers that make sense to be the **defaults** here? 
+
+```{r abstract-fxn, eval=F}
+calc_sample_means <- function(variable,
+                              length,
+                              size) {
+  set.seed(08540)
+  sample_means <- numeric(length = length)
+  for (i in seq_along(sample_means)) {
+    samp <- sample(variable, size = size, replace = TRUE)
+    samp_mean <- mean(samp)
+    sample_means[i] <- samp_mean
+  }
+
+  mean_of_samp_means <- mean(sample_means)
+  
+  # lots_of_things <- list(sample_means, mean_of_samp_means)
+  
+  return(mean_of_samp_means)
+}
+
+calc_sample_means(addh$age, 45, 18)
+```
+
+### Your Turn
+
+Try running the new function we wrote with various arguments. An example is provided below.
+
+```{r run-fxn, eval=F}
+calc_sample_means(addh$age, 10, 225)
+
+```
+
+### Your Turn - Bonus
+
+We can use **positional** or **named** arguments in a function. Will the following code run?
+Why or why not? Which of these types of arguments do you think we're using?
+
+```{r run-fxn2, eval=F}
+calc_sample_means(size = 225, data = addh$imp_love, length = 1999)
+calc_sample_means(addh$imp_love, size = 10, length = 60)
+```
+
+# Functions - Visualization
+
+We can use a function to generate ggplot2 graphics for us automatically as well!
+
+```{r vis-fxn, eval=F}
+vis_sample_means <- function(____,____,____) {
+  
+  # calculating sample means
+  
+  
+  # visualizing density of sample means
+  
+  
+  # return a ggplot
+  
+}
+
+# test it out!!
+vis_sample_means(___, ___, ___)
+vis_sample_means(___, ___, ___)
+vis_sample_means(___, ___, ___)
+
+```
+
+### Your Turn
+
+Try running the new function we wrote with various arguments.
+
+```{r run-vis-fxn}
+
+```
+
+### Your Turn - Bonus
+
+Let's pretend the length and the data are fixed. What happens when you change the sample size?
+
+```{r vis-fxn-fixed}
+# Abstract out - ggplot2!
+
+```
+
+Create a vector called `sizes` that has sizes 100, 1000, 5000, and 10000.
+Then, call the `lapply()` function with the first argument as the new vector
+you created and the second the name of the function.
+
+What do you think `lapply()` is doing?
+
+```{r vis-fxn-lapply}
+
+```
+
+# Odds and Ends
+
+### Pivoting data
+
+ggplot2 likes "long" data. So if you have "wide" data, you may need to pivot it.
+
+Pivoting to wide:
+
+```{r}
+
+```
+
+### Your Turn
+
+Plot three density plots of addh_wide on the same graph, with the variable in different colors.
+
+```{r eval=F}
+ggplot(___, aes(x = ___, col = ___)) +
+  geom____() +
+  theme_bw()
+```
+
+Pivoting back to long:
+
+```{r}
+
+```
+
+# Functional programming
+
+Unlike Python, C, etc., which are known as "object-oriented programming languages",
+R is a "functional programming" language. That means that the most natural way to
+do things is actually to write functions and "apply" them to lists of objects.
+We'll teach you a few basics here! Read more in [Advanced R](https://adv-r.hadley.nz/fp.html). 
+
+### Lists and the apply functions
+
+We've mostly talked about vectors and dataframes, but R has another data type called a list.
+Anything can go into a list: vectors, numbers, or even dataframes. They also don't need to be the same type.
+These can be very powerful for use with functions, particularly with `lapply` and the `map_*()` functions from the {purrr} package.
+
+Lists can hold anything - unlike vectors, they can also combine different **types** of things.
+You can even make lists of lists!
+
+Let's start with making two lists:
+
+```{r}
+
+```
+
+The two base R functions that are useful to know are lapply() (take a list and a function, and plug every
+item from the list into the function, output as a list) and sapply() (similar, but
+returns a vector).
+
+Here's lapply with the mean() function:
+
+```{r}
+
+```
+
+And here's sapply:
+
+```{r}
+
+```
+
+### Your Turn
+
+Try to create a list of numeric vectors and take the max of each vector with lapply or sapply.
+
+```{r}
+
+```
+
+### Transitioning to purrr
+
+While the `apply()` functions are useful (and you'll see them on help sites),
+we recommend using the `purrr` package instead to more flexibly specify the type of 
+output you want.
+
+The syntax is `map(mylist, myfunction, functionoptions)` and can change depending
+on the type of output you want.
+
+**Exercise**: Go to Help > Cheat Sheets and find the cheatsheet for purrr. 
+What are the different objects that can be returned by the `map_*()` functions?
+
+-
+-
+-
+
+Here's map with the mean() function:
+
+```{r}
+
+```
+
+And here's map_dbl:
+
+```{r}
+
+```
+
+### Your Turn
+
+Try to create a list of numeric vectors and take the max of each vector with a map_*() function.
+Try out different ones!
+
+```{r}
+
+```
+
+
+
+

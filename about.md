@@ -13,4 +13,4 @@ The Sociology Summer Methods Camp began in 2016, and the materials that we curre
 
 We would also like to acknowledge the many other people who have shaped the material including: the instructional staff of the Math Camp for the Department of Politics at Princeton and the instructional staff of the Math Camp for the Department of Government at Harvard.
 
-All of the teaching materials that we created are available under a [Creative Commons-By](https://creativecommons.org/licenses/by/4.0/) license. You can find them on [GitHub](https://github.com/bstewart/princeton_methods_camp). Please feel free to use and improve them.
+All of the teaching materials that we created are available on [GitHub](https://github.com/bstewart/princeton_methods_camp). Please feel free to use and improve them.
