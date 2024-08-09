@@ -1,77 +1,66 @@
 #### Methods Camp 2023 Schedule 
 
-Breakfast: *9:00 AM*
-
-Morning session, math: *9:30 - 11:30 AM*
-
-Lunch session (with guest speakers): *12:00 - 1:30 PM*  
-
-Afternoon session, programming : *2:00 - 4:00 PM*
+**Breakfast**: 9:00 AM every day
 
 **Location**: 165 Wallace Hall
 
-**Office hours**: Angela and Varun will discuss options at the beginning of the camp.
+**Office hours**: Christina and Varun will discuss options at the beginning of the camp.
 
-## Day 1
+## Day 1: Tuesday
 
 **Math**: Calculus and its Applications
 
-- What is a deriative and why are we learning about them?
-- Rules for logs and exponents
-- Higher-order derivatives
-- Partial derivatives
+Morning session: *9:30 - 11:30 AM*
 
-**Lunchtime speaker**: Adam Goldstein
+- Introductions and goals of camp
+- Why calculus?
+- Phiolosophy of R
 
-**Computing**: Review of Basics
+Lunch session (with guest speakers): *12:00 - 1:30 PM*  
+- Prof. Miguel Centeno
 
-- Summer review, indexing and manipulation of four main data structures: vectors, lists, matrices, and data.frames
-- Three useful tools for data manipulation: logical statements, control flow, for loops
-- Dplyr as a tool for data manipulation
+Afternoon session: *2:00 - 4:00 PM*
 
-## Day 2
+- Pair programming
+- Group work
 
-**Math**: Linear Algebra
+## Day 2: Wednesday 
 
-- What are vectors?
-- Vector operations (addition/subtraction and the dot product)
-- What are matrices?
-- Matrix operations (addition/subtraction and matrix multiplication)
+Morning session: *9:30 - 11:30 AM*
 
-**Lunchtime speaker**: Patricia Fernandez-Kelly
+- Why linear algebra?
+- Programming with loops
 
-**Computing**: Functions and the Apply family
+Lunch session (with guest speakers): *12:00 - 1:30 PM* 
+- Prof. Betsy Armstrong
 
-- Functions
-- Apply family 
-- Iteration
+Afternoon session: *2:00 - 4:00 PM*
 
+- Programming with functions
+- Group work
 
-## Day 3
+## Day 3: Thursday
 
-**Math**: Basic Probability
+Morning session: *9:30 - 11:30 AM*
 
-- Why do we need probability?
-- Counting
-- Sets and operations on sets
-- Experiments, events, and sample spaces
-- An introduction to probability
-- The law of total probability, Bayes' rule, and independence
+- Why probability?
+- Tidying, merging, and exporting 
+- Data visualization
 
-**Lunchtime speaker**: Janet Vertesi
+Lunch session: *12:00 - 1:30 PM*
+- Speaker TBC
 
-**Computing**: Data Cleaning and more Advanced Manipulation
+Afternoon session: *2:00 - 4:00 PM*
 
-- Follow up from Day 2's with math lecture: matrix algebra in R
-- Reading data from different file formats
-- Merging data
-- Reshaping data between long and wide format
-- Basic string operations for renaming and recoding variables
+- Pair programming
+- Group work
 
-## Day 4
+## Day 4: Friday
 
 In day 4 we will be working on a mini-project with the Stanford Open Policing Project's data ([link](https://openpolicing.stanford.edu/data/)). 
 
+Lunch session (with guest speakers): *12:00 - 1:30 PM* 
+- Prof. Ben Bradlow
 
 
 
