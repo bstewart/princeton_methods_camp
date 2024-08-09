@@ -14,7 +14,7 @@ Morning session: *9:30 - 11:30 AM*
 
 - Introductions and goals of camp
 - Why calculus?
-- Phiolosophy of R
+- Philosophy of R
 
 Lunch session (with guest speakers): *12:00 - 1:30 PM*  
 - Prof. Miguel Centeno
