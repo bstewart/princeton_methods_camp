@@ -17,7 +17,7 @@ Morning session: *9:30 - 11:30 AM*
 - Philosophy of R
 
 Lunch session (with guest speakers): *12:00 - 1:30 PM*  
-- Prof. Miguel Centeno
+- Miguel Centeno
 
 Afternoon session: *2:00 - 4:00 PM*
 
@@ -32,7 +32,7 @@ Morning session: *9:30 - 11:30 AM*
 - Programming with loops
 
 Lunch session (with guest speakers): *12:00 - 1:30 PM* 
-- Prof. Betsy Armstrong
+- Betsy Armstrong
 
 Afternoon session: *2:00 - 4:00 PM*
 
@@ -48,7 +48,7 @@ Morning session: *9:30 - 11:30 AM*
 - Data visualization
 
 Lunch session: *12:00 - 1:30 PM*
-- Speaker TBC
+- Ed Freeland
 
 Afternoon session: *2:00 - 4:00 PM*
 
@@ -60,7 +60,7 @@ Afternoon session: *2:00 - 4:00 PM*
 In day 4 we will be working on a mini-project with the Stanford Open Policing Project's data ([link](https://openpolicing.stanford.edu/data/)). 
 
 Lunch session (with guest speakers): *12:00 - 1:30 PM* 
-- Prof. Ben Bradlow
+- Benjamin Bradlow
 
 
 
