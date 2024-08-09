@@ -10,4 +10,4 @@ At the end of the Methods Camp, students will be able to:
 - Perform matrix addition, subtraction, multiplication, and inversion.
 - Combine the 5 dplyr verbs, join data sets, and convert between long and wide formats
 - Use loops, purrr, and functions to avoid repeating yourself
-- Make simple graphs in ggplot2, write Quarto documents, and write basic equations in LaTeX
+- Make simple graphs in ggplot2, write Markdown documents, and write basic equations in LaTeX
