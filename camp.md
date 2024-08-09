@@ -1,4 +1,4 @@
-#### Methods Camp 2023 Schedule 
+#### Methods Camp 2024 Schedule 
 
 **Breakfast**: 9:00 AM every day
 
