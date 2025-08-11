@@ -1,13 +1,12 @@
 ## Learning objectives
 
-The Methods Camp is designed to give you training in both math and computing.  In math, you will receive training in three main areas: calculus, probability, and matrix algebra.  In computing, you will receive training in three main areas: data wrangling, iteration, and visualization.
+The Methods Camp is designed to give you training primarily in computing, though we will also be reviewing some basic statistics and probability concepts.
 
 At the end of the Methods Camp, students will be able to:
 
 - Start the semester excited and ready to learn new methods
-- Explain in words and pictures what is a derivative and what is an integral
-- Define probabilities in sets, perform basic set operations, calculate conditional probabilities, and use Bayes rule.
-- Perform matrix addition, subtraction, multiplication, and inversion.
 - Combine the 5 dplyr verbs, join data sets, and convert between long and wide formats
-- Use loops, purrr, and functions to avoid repeating yourself
+- Write for loops and other methods for walking through lists and repeating code.
 - Make simple graphs in ggplot2, write Markdown documents, and write basic equations in LaTeX
+- Learn how to access and understand built-in functions in R as well as write your own.
+- Perform matrix addition, subtraction, multiplication

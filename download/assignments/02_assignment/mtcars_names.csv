@@ -1,0 +1,33 @@
+car_id,car_name
+01-2008,Mazda RX4
+02-2015,Mazda RX4 Wag
+03-2007,Datsun 710
+04-2006,Hornet 4 Drive
+05-2009,Hornet Sportabout
+06-2016,Valiant
+07-2017,Duster 360
+08-2007,Merc 240D
+09-2018,Merc 230
+10-2009,Merc 280
+11-2010,Merc 280C
+12-2016,Merc 450SE
+13-2011,Merc 450SL
+14-2001,Merc 450SLC
+15-2018,Cadillac Fleetwood
+16-2012,Lincoln Continental
+17-2012,Chrysler Imperial
+18-2018,Fiat 128
+19-2009,Honda Civic
+20-2015,Toyota Corolla
+21-2004,Toyota Corona
+22-2003,Dodge Challenger
+23-2017,AMC Javelin
+24-2000,Camaro Z28
+25-2015,Pontiac Firebird
+26-2016,Fiat X1-9
+27-2011,Porsche 914-2
+28-2020,Lotus Europa
+29-2001,Ford Pantera L
+30-2017,Ferrari Dino
+31-2011,Maserati Bora
+32-2014,Volvo 142E

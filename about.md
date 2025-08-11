@@ -11,6 +11,7 @@ The Sociology Summer Methods Camp began in 2016, and the materials that we curre
 - 2022: Joe Sageman, Angela Li (graduate student instructors) and Brandon Stewart (faculty adviser).
 - 2023: Angela Li, Varun Satish (graduate student instructors) and Matthew Salganik (faculty adviser).
 - 2024: Varun Satish, Christina Pao (graduate student instructors) and Brandon Stewart (faculty adviser).
+- 2025: Sofia Avila, Christina Pao (graduate student instructors) and Florencia Torche (faculty adviser).
 
 We would also like to acknowledge the many other people who have shaped the material including: the instructional staff of the Math Camp for the Department of Politics at Princeton and the instructional staff of the Math Camp for the Department of Government at Harvard.
 

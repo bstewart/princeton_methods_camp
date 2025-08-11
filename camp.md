@@ -1,66 +1,53 @@
-#### Methods Camp 2024 Schedule 
-
-**Breakfast**: 9:00 AM every day
+#### Methods Camp 2025 Schedule 
 
 **Location**: 165 Wallace Hall
 
-**Office hours**: Christina and Varun will discuss options at the beginning of the camp.
+**We will have lunch every day at 12pm. If you haven't yet, make sure to submit your lunch ordering form.**
 
-## Day 1: Tuesday
+## Day 1: Saturday, August 30th
 
-**Math**: Calculus and its Applications
+Morning session: *9:30 - 12:00 PM*
 
-Morning session: *9:30 - 11:30 AM*
+- Purpose of methods camp and SOC 500
+- Pre-assignment discussion
+- Objects in R, setting up badic R settings, project workflow/management in R
+- Intro to Tidyverse for data exploration and manipulation
 
-- Introductions and goals of camp
-- Why calculus?
-- Philosophy of R
+Afternoon session: *1:00 - 2:00 PM*
 
-Lunch session (with guest speakers): *12:00 - 1:30 PM*  
-- Miguel Centeno
+- Recoding variables, logical structure, variable types
+- Matrices, vectors, data structures (long vs wide, dataframe vs tibble)
+- Basic matrix operations by hand and in R. 
 
-Afternoon session: *2:00 - 4:00 PM*
+- Group work: *2:00 PM - 3:00PM*
 
-- Pair programming
-- Group work
+## Day 2: Friday, September 5th
 
-## Day 2: Wednesday 
+Morning session: *9:30 - 12:00 PM*
 
-Morning session: *9:30 - 11:30 AM*
+- Reshaping, merging, and saving/exporting data, 
+- Math equations in LaTeX
+- Formatting in Rmd and Qmd and settings for code chunks
+- For loops and while loops
 
-- Why linear algebra?
-- Programming with loops
+Afternoon session: *1:00 - 2:00 PM*
 
-Lunch session (with guest speakers): *12:00 - 1:30 PM* 
-- Betsy Armstrong
+- Intro to data visualization
 
-Afternoon session: *2:00 - 4:00 PM*
+- Group work: *2:00 PM - 3:00PM*
 
-- Programming with functions
-- Group work
+## Day 3: Saturday, September 6th
 
-## Day 3: Thursday
+Morning session: *9:30 - 12:00 PM*
 
-Morning session: *9:30 - 11:30 AM*
+- Functions and libraries
+- Lists and apply functions
 
-- Why probability?
-- Tidying, merging, and exporting 
-- Data visualization
+Afternoon session: *1:00 - 2:00 PM*
 
-Lunch session: *12:00 - 1:30 PM*
-- Ed Freeland
+- Sampling functions (normal and uniform). 
+- Introduction to random variable, probability and cumulative density functions
+- Analytical vs empirical (simulation-based) solutions
 
-Afternoon session: *2:00 - 4:00 PM*
-
-- Pair programming
-- Group work
-
-## Day 4: Friday
-
-In day 4 we will be working on a mini-project with the Stanford Open Policing Project's data ([link](https://openpolicing.stanford.edu/data/)). 
-
-Lunch session (with guest speakers): *12:00 - 1:30 PM* 
-- Benjamin Bradlow
-
-
+- Group work: *2:00 PM - 3:00PM*
 
