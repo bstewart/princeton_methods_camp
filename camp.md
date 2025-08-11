@@ -6,7 +6,7 @@
 
 ## Day 1: Saturday, August 30th
 
-Morning session: *9:30 - 12:00 PM*
+Morning session: *9:15 - 12:00 PM*
 
 - Purpose of methods camp and SOC 500
 - Pre-assignment discussion
@@ -23,7 +23,7 @@ Afternoon session: *1:00 - 2:00 PM*
 
 ## Day 2: Friday, September 5th
 
-Morning session: *9:30 - 12:00 PM*
+Morning session: *9:15 - 12:00 PM*
 
 - Reshaping, merging, and saving/exporting data, 
 - Math equations in LaTeX
@@ -38,7 +38,7 @@ Afternoon session: *1:00 - 2:00 PM*
 
 ## Day 3: Saturday, September 6th
 
-Morning session: *9:30 - 12:00 PM*
+Morning session: *9:15 - 12:00 PM*
 
 - Functions and libraries
 - Lists and apply functions
