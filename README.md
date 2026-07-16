@@ -1,89 +1,62 @@
-This is the website for the Princeton Sociology Methods Camp for incoming Princeton PhD Students.
+# Princeton Sociology Methods Camp website
+
+This repository contains the one-page website for the Princeton Sociology Methods Camp:
 
 https://pusocmethodscamp.org/
 
-Powered by [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/).
-# Table of contents
+The site is built with [Quarto](https://quarto.org/) and published through GitHub Pages.
 
-* [Editing](#editing)
-  * [Local development environment](#local-development-environment)
-  * [The default layout](#the-default-layout)
-    * [Navigation](#navigation)
-    * [Sections](#sections)
+## Repository structure
 
-# Editing
+- `index.qmd` assembles the scrolling homepage.
+- `sections/` contains the editable Markdown sections included by the homepage.
+- `download/` contains the current assignments, slides, and data files.
+- `styles.scss` contains the small set of site-specific style rules.
+- `nav-active.html` highlights the current section in the navigation while scrolling.
+- `_quarto.yml` contains navigation and build settings.
+- `.github/workflows/site.yml` validates pull requests and deploys `master`.
 
-## Local development environment
+Only `index.qmd` is rendered as a page. Files under `sections/` are included as fragments, and files under `download/` are copied without being executed.
 
-While not required, it is possible to setup a local development environment to
-see the changes you make before they're live. The site is powered by Jekyll,
-which written in Ruby. Installation steps:
+## Local preview
 
-1. Ensure you have `ruby` command installed
-2. Run: `gem install bundler`
-3. Clone this repository via git
-4. Within the cloned git repository run: `bundle install`
-5. Run: `bundle exec jekyll serve`
+Install Quarto 1.9.38 or a compatible newer stable release. From the repository root, run:
 
-## The default layout
-
-The default layout is used for the homepage of the site as indicated in
-`index.md`. The default layout does the following things content-wise:
-
-1. Output a navigation bar based on the `navigation` frontmatter in markdown
-   file (e.g., `index.md`)
-2. Output the content in the markdown file (e.g., `index.md`).
-3. Output the content from any sections defined in the frontmatter.
-
-### Navigation
-
-The navigation is a list of links with a `name` key and a `url` key. The `url`
-key can be any URL. However, in our usage we're including URLs to particular
-sections in the document. These section links must match the id created
-automatically for headers in the markdown files. For example, consider the
-following markdown file:
-
-```md
-## Learning objectives
-
-Learning objectives here.
+```sh
+quarto preview
 ```
 
-When that markdown gets converted, the header will automatically receive an id
-of `learning-objectives`. To link to this section, you'd use a `url` of
-`#learning-objectives` in that navigation list. You may specify your own header
-id with:
+The preview opens in a browser and refreshes as files change. Before opening a pull request, run a clean production render:
 
-```md
-## Learning objectives {#my-special-id}
-
-Learning objectives here.
+```sh
+quarto render
 ```
 
-In this case, you should use `#my-special-id` for the `url` key when linking to
-this section.
+Generated files are written to `_site/` and are not committed.
 
+## Publishing
 
-### Sections
+Every pull request to `master` must render successfully and pass the automated link check. After a pull request is merged, the same workflow renders the site and deploys it to GitHub Pages. Do not edit or commit `_site/`.
 
-You may add additional sections to the page by adding them to the `sections`
-list in the markdown files frontmatter. When processing the sections, the
-default layout will look for markdown files by that name and include their
-content within each new section.
+The repository has two one-time settings that support this workflow:
 
-For example the current frontmatter of `index.md` includes this:
+- GitHub Pages uses **GitHub Actions** as its source.
+- The `master` branch requires a pull request and the `render-and-check` status before merging.
 
-```yaml
-sections:
-  - learning-objectives
-  - pre-arrival
-  - camp
-  - logistics
-  - faq
-  - about
-```
+## Annual update checklist
 
-The default layout will show the content of `index.md` first and then include the
-content from `learning-objectives.md`, `pre-arrival.md`, `camp.md`,
-`logistics.md`, `faq.md`, and `about.md` in that order. You can add or remove
-sections to your liking.
+1. Update the introductory text in `index.qmd`.
+2. Update the objectives, pre-arrival information, schedule, FAQs, and acknowledgements under `sections/`.
+3. Replace the current student-facing files under `download/`; remove files that should no longer be distributed.
+4. Run `quarto preview` and inspect the complete page at desktop and mobile widths.
+5. Check every student-facing download.
+6. Run `quarto render` and confirm there are no warnings or errors.
+7. Open a pull request and wait for the `render-and-check` status to pass.
+8. Merge the pull request and verify https://pusocmethodscamp.org/.
+
+## Troubleshooting
+
+- If a section is missing, check its include line in `index.qmd` and its filename under `sections/`.
+- If a navigation link misses its section, verify that its anchor in `_quarto.yml` matches the rendered heading identifier.
+- If the link check fails for a temporary external error, retry the workflow once before changing or excluding the link.
+- If deployment fails after a successful render, inspect the `deploy` job in the GitHub Actions run.

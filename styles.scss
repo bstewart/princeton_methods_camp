@@ -1,0 +1,230 @@
+/*-- scss:defaults --*/
+$primary: #995126;
+$princeton-orange: #e77500;
+$body-color: #34312d;
+$headings-color: #181715;
+$link-color: #8a4823;
+$link-hover-color: #5f3017;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$headings-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$border-radius: 0.2rem;
+
+/*-- scss:rules --*/
+html {
+  scroll-padding-top: 4.75rem;
+}
+
+body {
+  background: #ffffff;
+  font-size: 1.02rem;
+  line-height: 1.68;
+  overflow-x: clip;
+}
+
+.navbar {
+  background: rgb(38 40 45 / 98%) !important;
+  border-bottom: 0;
+  box-shadow: none;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.navbar .nav-link {
+  color: #d6d7d9 !important;
+  font-size: 0.9rem;
+  font-weight: 520;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link.active {
+  color: $princeton-orange !important;
+  font-weight: 700;
+  position: relative;
+}
+
+.navbar .nav-link.active::after {
+  background: $princeton-orange;
+  border-radius: 999px;
+  bottom: 0.2rem;
+  content: "";
+  height: 0.12rem;
+  left: 0.5rem;
+  position: absolute;
+  right: 0.5rem;
+}
+
+.navbar-toggler {
+  border: 0;
+  box-shadow: none !important;
+}
+
+#quarto-content,
+main.content {
+  margin: 0;
+  max-width: none;
+  padding: 0;
+}
+
+.camp-section {
+  background: #ffffff;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 0;
+  position: relative;
+  width: 100vw;
+}
+
+.camp-section:nth-of-type(even) {
+  background: #f6f5f2;
+}
+
+.camp-container {
+  margin: 0 auto;
+  max-width: 52rem;
+  padding: clamp(2.25rem, 4vw, 2.75rem) clamp(1.35rem, 4vw, 2.25rem);
+}
+
+.camp-hero {
+  background: #ffffff;
+}
+
+.camp-hero .camp-container {
+  padding-bottom: clamp(2.5rem, 4vw, 3rem);
+  padding-top: 1.5rem;
+}
+
+#title-block-header.quarto-title-block {
+  margin: 0 auto;
+  max-width: 52rem;
+  padding: clamp(2.75rem, 5vw, 4rem) clamp(1.35rem, 4vw, 2.25rem) 0;
+}
+
+#title-block-header.quarto-title-block h1 {
+  font-size: clamp(2.3rem, 4.5vw, 3rem);
+  font-weight: 680;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  margin: 0;
+  max-width: 15ch;
+}
+
+.camp-hero .camp-container > p:first-of-type {
+  color: #46413c;
+  font-size: clamp(1.15rem, 2.3vw, 1.3rem);
+  line-height: 1.65;
+  max-width: 43rem;
+}
+
+.camp-container h2,
+.camp-container h3 {
+  scroll-margin-top: 4.75rem;
+}
+
+.camp-container h2 {
+  border: 0;
+  font-size: clamp(1.65rem, 3vw, 1.95rem);
+  letter-spacing: -0.025em;
+  margin-bottom: 1.4rem;
+  margin-top: 0;
+  padding: 0;
+}
+
+.camp-container h3 {
+  font-size: 1.35rem;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.1rem;
+  margin-top: 2.5rem;
+}
+
+.camp-container p,
+.camp-container li {
+  max-width: 46rem;
+}
+
+.camp-container li + li {
+  margin-top: 0.35rem;
+}
+
+.camp-container li > p {
+  margin-bottom: 0;
+}
+
+#faqs ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#faqs li + li {
+  margin-top: 2rem;
+}
+
+.camp-container > :last-child {
+  margin-bottom: 0;
+}
+
+.nav-footer {
+  background: #ffffff;
+  border-top: 1px solid #e7e4df;
+  color: #77716a;
+  display: block;
+  font-size: 0.76rem;
+  min-height: 0;
+  padding: 1rem 1.35rem;
+}
+
+.nav-footer-center {
+  min-height: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.nav-footer-left,
+.nav-footer-right {
+  display: none;
+}
+
+.nav-footer p {
+  margin: 0;
+}
+
+a {
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.14em;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 0.15rem solid $primary;
+  outline-offset: 0.2rem;
+}
+
+@media (max-width: 575.98px) {
+  #title-block-header.quarto-title-block h1 {
+    font-size: 2.05rem;
+    letter-spacing: -0.035em;
+  }
+
+  .camp-container {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .camp-hero .camp-container {
+    padding-bottom: 2.75rem;
+    padding-top: 1.5rem;
+  }
+
+  .navbar-collapse {
+    padding-top: 0.45rem;
+  }
+}
