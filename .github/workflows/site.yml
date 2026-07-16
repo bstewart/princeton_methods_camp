@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -37,13 +37,12 @@ jobs:
             --no-progress
             --max-retries 3
             --retry-wait-time 2
-            --exclude-mail
             --accept 200,206,403,429
             '_site/**/*.html'
           fail: true
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
@@ -61,4 +60,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
