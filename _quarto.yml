@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+  resources:
+    - CNAME
+    - download/**
+
+website:
+  title: "Princeton Sociology Methods Camp"
+  site-url: "https://pusocmethodscamp.org"
+  search: false
+  page-footer:
+    center: "This website was designed with assistance from OpenAI Codex, powered by GPT-5.6 Sol."
+    border: false
+  navbar:
+    title: "Methods Camp"
+    pinned: true
+    background: dark
+    foreground: light
+    collapse-below: sm
+    left:
+      - text: "Learning objectives"
+        href: "index.qmd#learning-objectives"
+      - text: "Pre-arrival"
+        href: "index.qmd#pre-arrival"
+      - text: "2025 Schedule"
+        href: "index.qmd#schedule"
+      - text: "FAQs"
+        href: "index.qmd#faqs"
+      - text: "About"
+        href: "index.qmd#about"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: false
+    smooth-scroll: true
+    anchor-sections: false
+    include-after-body: nav-active.html
+
+execute:
+  enabled: false
+
+lang: en

@@ -1,0 +1,45 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const links = Array.from(document.querySelectorAll(".navbar .nav-link[href*='#']"));
+  const items = links.map((link) => {
+    const id = new URL(link.href).hash.slice(1);
+    return { link, section: document.getElementById(id) };
+  }).filter((item) => item.section);
+
+  if (!items.length) return;
+
+  const updateActiveLink = () => {
+    const navbarHeight = document.querySelector(".navbar")?.offsetHeight ?? 0;
+    const threshold = navbarHeight + 24;
+    let current = null;
+
+    for (const item of items) {
+      if (item.section.getBoundingClientRect().top <= threshold) current = item;
+      else break;
+    }
+
+    for (const item of items) {
+      const isActive = item === current;
+      item.link.classList.toggle("active", isActive);
+      if (isActive) item.link.setAttribute("aria-current", "true");
+      else item.link.removeAttribute("aria-current");
+    }
+  };
+
+  let updateQueued = false;
+  const queueUpdate = () => {
+    if (updateQueued) return;
+    updateQueued = true;
+    window.requestAnimationFrame(() => {
+      updateActiveLink();
+      updateQueued = false;
+    });
+  };
+
+  window.addEventListener("scroll", queueUpdate, { passive: true });
+  window.addEventListener("resize", queueUpdate);
+  window.addEventListener("hashchange", queueUpdate);
+  window.addEventListener("load", queueUpdate);
+  queueUpdate();
+});
+</script>
